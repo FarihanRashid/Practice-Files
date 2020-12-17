@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;1,500;1,600&display=swap');
+body{
+    padding: 20px;
+}
+a{
+    color: #000000;
+    font-weight: bold;
+    text-decoration: none;
+}
+header h1{
+    text-transform: uppercase;
+    font-size: 30px;
+    text-align: center;
+    color: #ffffff;
+}    
+header{    
+    background-image: url(../images/flywheel.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    padding: 40px 0;
+}
+header nav {
+    display: flex;
+    justify-content: space-around;
+}
+header nav a{
+    background-color: rgba(211, 211, 211, .4);
+    display: inline-block;
+    width: 170px;
+    height: 50px;
+    border-radius: 10%;
+    -webkit-border-radius: 10%;
+    -moz-border-radius: 10%;
+    -ms-border-radius: 10%;
+    -o-border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header nav a:hover, header nav a:focus, header nav .active {
+    background-color: #ffffff;
+    color:#0000ff;
+}
+main{
+    display: flex;
+}
+main aside.left{
+    padding: 20px;
+    width: 30%;
+    background-color: #808000;
+}
+aside.left img{
+    border: 5px solid #000000;
+    width: 100%;
+    margin: 10px 0;
+    
+}
+aside.left a{
+    /* cursor: context-menu; */
+    pointer-events: none;
+}
+section.right{
+    padding: 10px 20px;
+}
+
+section table{
+    width: 75%;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    border-bottom-left-radius: 5px ;
+    border-bottom-right-radius: 5px ;
+}
+
+section table tr{    
+    background-color: rgba(152, 250, 73, 0.959);
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+}
+section table td{
+    padding: 8px;
+    opacity: 0.7;
+    margin: 0 2px 2px 0 0;
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+}
+section table tr:hover,
+section table td:hover{
+    opacity: 1;
+    font-size: large;
+    font-weight: bolder;
+}
+section table tr th{
+    background: linear-gradient(3600deg, rgba(84,77,218,1) 0%, rgba(5,130,177,1) 53%, rgba(0,211,255,0.7707457983193278) 100%);
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-top-left-radius: 5px ;
+    border-top-right-radius: 5px ;
+    border-bottom: 4px solid rgb(69, 185, 54);
+}
+
+section table tr td,
+section table tr td:nth-child(2),
+section table tr td:nth-child(3){
+    text-align: center;
+}
+section table tr td:first-child{
+    text-align: left;
+}
+
+
+
+
+
