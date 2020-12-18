@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My first website using CSS & Javascript</title>
+	<link rel="stylesheet" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>	
+
+<body>
+	<div class="hero">
+		<div class="navbar">
+			<img src="images/logo1.png" class="logo" width=250>
+		</div>
+		<div class="content">
+		<small>Welcome to my</small>
+		<h1>World's Best<br/> Learning Centre</h1>
+		<h5>By <strong>Farihan Rashid</strong></h5>
+		<br/>	
+		<button class="open-button" onclick="openForm()">Open Form</button>
+		</div>	
+		<div class="side-bar">
+			<img src="images/menu.png" class="menu">
+			<div class="social-links">
+				<a href="https://www.facebook.com/profile.php?id=100011336068730" target="_blank"><img src="images/fb.png"></a>
+				<a href="https://www.instagram.com/farihan.rashid/" target="-blank"><img src="images/ig.png"></a>
+			</div>
+			<div class="useful-links">
+				<a href="http://www.facebook.com/sharer.php?u=https://simplesharebuttons.com" target="_blank"><img src="images/share.png"></a>
+				<img src="images/info.png">
+			</div>
+		</div>
+	<div class="bubbles">
+		<img src="images/bubble.png">
+		<img src="images/bubble.png">
+		<img src="images/bubble.png">
+		<img src="images/bubble.png">
+		<img src="images/bubble.png">
+		<img src="images/bubble.png">+
+		<img src="images/bubble.png">
+	</div>
+		
+	</div>
+	<div class="form-popup" id="myForm">
+		<form action="/action_page.php" class="form-container">
+		<u><center><h3>Login</h3></center></u>
+			
+		<label for="name"><b>Email</b></label>
+    	<input type="text" placeholder="Enter Name" name="name" required>
+		
+    	<label for="email"><b>Email</b></label>
+    	<input type="text" placeholder="Enter Email" name="email" required>
+
+    	<label for="psw"><b>Password</b></label>
+    	<input type="password" placeholder="Enter Password" name="psw" required>
+
+    	<button type="submit" class="btn">Login</button>
+    	<button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
+  		</form>
+	</div>
+	
+	<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+	
+	
+
+	
+	
+</body>
+	
+</html>
