@@ -16,6 +16,13 @@ a{
 
 /* common css ends */
 
+.full-wrapper{
+    background: radial-gradient(circle, rgba(188,231,39,0.9192051820728291) 0%, rgba(217,82,48,0.969625350140056) 73%);
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
 .form-wrapper{
     padding: 100px;
     margin: 0 auto;
@@ -24,13 +31,14 @@ a{
 
 .form-wrapper .form_1{
     border: .5px solid rgb(92, 92, 92);
-    box-shadow: 5px 8px 5px 0px #858484;
+    box-shadow: 5px 18px 10px 0px #585858;
     padding: 100px;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+    background-color: rgb(183, 243, 253);
 }
 .form-wrapper .form_1 input{
     width: 300px;
