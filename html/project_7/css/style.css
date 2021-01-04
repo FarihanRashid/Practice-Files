@@ -389,6 +389,12 @@ nav {
 #footer_sec .card{
     width: 260px;
 }
+#footer_sec .card1 .address span{
+    display: block;
+}
+#footer_sec .card1 .address span a{
+    color: #cacaca;
+}
 #footer_sec .card h3{
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 16px;
