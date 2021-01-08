@@ -1,431 +1,840 @@
-/*============ common csss goes here =============*/
-
-*{
+*,::before,::after{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+/* font css */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+.container{
+    margin: 0 auto;
+}
+ol,ul{
+    list-style: none;
+}
 a{
+    display: inline-block;
     text-decoration: none;
 }
-ul,ol {
-    list-style-type: none;
+.row{
+    display: flex;
+    flex-wrap: wrap;
 }
-.clr {
-    clear: both;
+.row-grid{
+    display: grid;
 }
 img{
     vertical-align: middle;
 }
-body{
-    font-family: 'Roboto Condensed', sans-serif;
+.section-heading h2{
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 42px;
+    font-weight: 400;
+    color: #4e525d;
+    padding-bottom: 60px;
 }
-/*============ common css goes here =============*/
-nav {
-    background-color: rgba(0, 0, 0, .44);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 9999;
-}
-.container {
-    width: 1170px;
+
+.container{
+    width:100%;
+    padding: 0 15px;
     margin: 0 auto;
 }
-.logo {
-    width: 270px;
-    float: left;
+button,input,textarea,
+button:focus,input:focus,textarea:focus{
+    outline: none;
+    border: none;
 }
-.logo img{
-    padding-top: 34px;
-}
-.menu {
-    width: 900px;
-    float: left;
-    text-align: right;
-}
-.menu ul li {
-    display: inline-block;
-    padding-left: 44px;
-}
-.menu ul li a {
-    line-height: 90px;
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 14px;
-    color: #fff;
-    font-weight: 700;
-    text-transform: uppercase;
-    transition: all linear .3s;
-}
-.menu ul li a:hover {
-    color: #28b8d8;
-}
-.menu ul li.active a {
-    color: #28b8d8;
-}
-/*============ Banner css\ goes here =============*/
-#banner {
-    background: url(../images/banner.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-top: 330px;
-    padding-bottom: 250px;
-}
-.banner-text {
-    text-align: center;
-}
-.banner-text h1 {
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 50px;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: #ffff;
-}
-.banner-text h3 {
-    font-family: 'Roboto Slab', serif;
-    font-size: 40px;
-    text-transform: uppercase;
-    color: #fff;
-    font-weight: 300;
-    letter-spacing: 1.5px;
-}
-.banner-text p {
-    font-family: 'Roboto Slab', serif;
-    font-size: 14px;
-    color: #fff;
-    font-weight: 300;
-    padding-top: 5px;
-}
-/*============ intro css goes here =============*/
-#intro {
-    padding-top: 80px;
-}
-.intro-text {
-    text-align: center;
-}
-.intro-text h2 {
-    font-family: 'Roboto Slab', serif;
-    font-size: 30px;
-    color: #444;
-    font-weight: 300;
-}
-.intro-text p {
-    font-family: 'Roboto', sans-serif;
-    font-size:14px;
-    color: #666;
-    font-weight: 400;
-    padding-top: 18px;
-}
-/*============ Service css goes here =============*/
-#service {
-    padding-top: 78px;
-}
-.head {
-    text-align: center;
-    padding-bottom: 30px;
-}
-.head h2{
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
-    color: #444;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-.service-item {
-    width: 370px;
-    float: left;
-    padding: 15px;
-    border: 1px solid #e3e3e3;
-    text-align: center;
-}
-.service-item h3 {
-    font-size: 17px;
-    font-family: 'Roboto Slab', serif;
-    color: #444;
-    font-weight: 700;
-    text-transform: capitalize;
-    padding-top: 15px;
-}
-.service-item p {
-    font-size: 14px;
-    font-family: 'Roboto', serif;
-    color: #666;
-    font-weight: 400;
-    line-height: 22px;
-    padding-top: 5px;
-    padding-bottom: 3px;
-}
-.mid-service {
-    margin-left: 30px;
-    margin-right: 30px;
-}
-/*============ gallery css goes here =============*/
-#gallery {
-    margin-top: 82px;
-    background-color: #2c2c2c;
-    padding-top: 51px;
-    padding-bottom: 65px;
-}
-#gallery .head h2 {
-    color: #d5d5d5;
-}
-.head h2 {
-    position: relative;
-    display: inline-block;
-}
-.head h2::after {
-    position: absolute;
-    content: '';
-    width: 100px;
-    height: 1px;
-    background-color: #535353;
-    top:50%;
-    left: -115px;
-    transform: translateY(-50%);
-}
-.head h2::before {
-    position: absolute;
-    content: '';
-    width: 100px;
-    height: 1px;
-    background-color: #535353;
-    top:50%;
-    right: -115px;
-    transform: translateY(-50%);
-}
-.gallery-item {
-    width: 25%;
-    float: left;
-}
-.gallery-item img {
-    width: 100%;
-}
-.insta-btn {
-    text-align: center;
-    padding-top: 77px;
-}
-.insta-btn a {
-    border: 1px solid #797979;
-    padding: 16px 20px;
-    color: #a6a6a6;
-    font-size: 14px;
-    font-family: 'Roboto', serif;
-    font-weight: 400;
-    text-transform: uppercase;
-    transition: all linear .3s;
-}
-.insta-btn a:hover {
-    background-color: #28b8d8;
-    color: #fff;
-    border-color: #28b8d8;
-}
+/*============================ media query css  ============================*/
 
+    /* Small devices (landscape phones, 576px and up) */
+        @media (max-width: 768px) {
+            .container{
+                max-width:540px;
+            }
+            .section-heading h2{
+                font-size: 30px;
+                padding-bottom: 40px;
+            }
+        }
+        
+    /* // Medium devices (tablets, 768px and up) */
+        @media (min-width: 768px) {
+            .container{
+                max-width:720px;
+            }  
+            .section-heading h2{
+                font-size: 30px;
+                padding-bottom: 45px;
+            }
+        }
+        
+    /* // Large devices (desktops, 992px and up) */
+        @media (min-width: 992px) {
+            .container{
+                max-width:960px;
+            }
+            .section-heading h2{
+                font-size: 42px;
+                padding-bottom: 60px;
+            }
+        }
+        
+    /*// Extra large devices (large desktops, 1200px and up) */
+        @media (min-width: 1200px) {
+            .container{
+                max-width:1140px;
+            }
+            .section-heading h2{
+                font-size: 42px;
+                padding-bottom: 60px;
+            }
+        }
 
-/* Journal Section Starts */
+/* common css ends */
 
-#journal_sec {
-    background-color: #f9f9f9;
-}
-#journal_sec .container{
-    padding: 78px 0;
-}
-.journal_card-area{
+/* header css starts */
+#header-section .logo{
+    max-width: 50%;
+    flex: 1 1 50% ;
     display: flex;
-    justify-content: space-between;
 }
-.journal_card-area .card{
-    width: 31.623%;
-    border: 1px solid #e3e3e3;
+#header-section .logo img{
+    align-self: center;
 }
-.journal_card-area .card .card-span1{
-    padding: 26px;
+#header-section .navbar{
+    max-width: 50%;
+    flex: 1 1 50% ;
+}
+#header-section .navbar ul{
+    display: flex;
+    justify-content: flex-end;
+}
+#header-section .navbar ul li{
+    margin-right: 10px;
+}
+#header-section .navbar ul li:last-child{
+    margin-right: 0;
+}
+#header-section .navbar ul li a{
+    text-transform: capitalize;
+    font-size: 15px;
+    font-weight: normal;
+    color: #484c55;
+    padding: 45px 20px;
+    border-bottom: 3px solid transparent;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+#header-section .navbar ul li a:hover{
+    color: #49cbcd;
+    border-bottom: 3px solid #49cbcd;
+    background-color: #f8f9fb;
+}
+     /*============================ media query css  ============================*/
+
+        /* Small devices (landscape phones, 576px and up) */
+        @media (max-width: 768px) {
+            #header-section .navbar{
+                max-width: 50%;
+                flex: 1 1 50% ;
+                display: none;
+            }
+            #header-section .logo{
+                padding: 20px 0;
+            }
+        }
+        
+        /* // Medium devices (tablets, 768px and up) */
+        @media (max-width: 768px) {
+            #header-section .navbar{
+                max-width: 50%;
+                flex: 1 1 50% ;
+                display: none;
+            }
+            #header-section .logo{
+                padding: 20px 0;
+            }
+        }
+        
+        /* // Large devices (desktops, 992px and up) */
+        @media (min-width: 992px) {
+        }
+        
+        /*// Extra large devices (large desktops, 1200px and up) */
+        @media (min-width: 1200px) {
+        }
+
+/* header css ends */
+
+
+/* cta area css starts */
+
+#cta-section .row{
+    justify-content: center;
+}
+#cta-section .jumbotron{
+    background: #39ade2 url(../images/jumbotron.jpg) no-repeat center;
+    background-size: cover;
+    /* min-width: fit-content; */
+}
+#cta-section .cta-content{
+    padding: 135px 0;
+    color: #ffffff;
     text-align: center;
 }
-.journal_card-area .card .card-span2{
-    padding: 26px;
+
+#cta-section .cta-content a{
+    border: 3px solid #ffffff;
+    color: #ffffff;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
 }
-.journal_card-area .card h3{
-    font-family: 'Roboto Slab', sans-serif;
-    font-weight: bold;
-    font-size: 16px;
-    padding-bottom: 16px;
+     /*============================ media query css  ============================*/
+
+        /* Small devices (landscape phones, 576px and up) */
+        @media (max-width: 768px) {
+            #cta-section .row h1{
+                font-size: 40px;
+                font-weight: 600;
+                padding-bottom: 20px;
+            }
+            #cta-section .row h3{
+                font-size: 18px;
+                font-weight: 400;
+                padding-bottom: 40px;
+            }
+            #cta-section .cta-content a{
+                padding: 10px 20px;
+            }
+        }
+        
+        /* // Medium devices (tablets, 768px and up) */
+        @media (min-width: 768px) {
+            #cta-section .row h1{
+                font-size: 63px;
+                font-weight: 600;
+                padding-bottom: 10px;
+            }
+            #cta-section .row h3{
+                font-size: 23px;
+                font-weight: 400;
+                padding-bottom: 40px;
+            }
+            #cta-section .cta-content a{
+                padding: 12px 30px;
+            }
+        }
+        
+        /* // Large devices (desktops, 992px and up) */
+        @media (min-width: 992px) {
+            #cta-section .row h1{
+                font-size: 63px;
+                font-weight: 600;
+                padding-bottom: 10px;
+            }
+            #cta-section .row h3{
+                font-size: 23px;
+                font-weight: 400;
+                padding-bottom: 80px;
+            }
+            #cta-section .cta-content a{
+                padding: 22px 40px;
+            }
+        }
+        
+        /*// Extra large devices (large desktops, 1200px and up) */
+        @media (min-width: 1200px) {
+            #cta-section .row h1{
+                font-size: 63px;
+                font-weight: 600;
+                padding-bottom: 10px;
+            }
+            #cta-section .row h3{
+                font-size: 23px;
+                font-weight: 400;
+                padding-bottom: 80px;
+            }
+            #cta-section .cta-content a{
+                padding: 22px 40px;
+            }
+        }
+
+/* cta area css ends */
+
+
+/* services section css starts */
+#services-section .row-grid{
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: auto;
+    grid-gap: 30px;
 }
-.journal_card-area .card h6{
-    font-family: 'Roboto', sans-serif;
+#services-section .services-area{
+    padding: 100px 0;
+}
+#services-section .services-area .services{
+    text-align: center;
+}
+#services-section .services-area .services .icon{
+   width: 100px;
+   height: 100px;
+   margin: 0 auto;
+   border: 2px solid #39ade2;
+   border-radius: 50%;
+   -webkit-border-radius: 50%;
+   -moz-border-radius: 50%;
+   -ms-border-radius: 50%;
+   -o-border-radius: 50%;
+}
+#services-section .services-area .services .icon i{
+    font-size: 50px;
+    color: #39ade2;
+    line-height: 100px;
+}
+#services-section .services-area .services h2{
+    text-transform: capitalize;
+    font-size: 22px;
     font-weight: 400;
-    font-size: 12px;
-    color: #999999;
+    color: #4e525d;
 }
-.journal_card-area .card p{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
+#services-section .services-area .services p{
     font-size: 14px;
-    color: #666666;
+    font-weight: 400;
+    color: #4e525d;
     padding-bottom: 20px;
 }
-.journal_card-area .card .card-span2 .bottom_sec{
-    font-family: 'Roboto', sans-serif;
+#services-section .services-area .services a{
     font-size: 14px;
-    display: flex;
-    justify-content: space-between;
-    color: #999999;
-    padding-bottom: 5px;
-}
-.journal_card-area .card .card-span2 .bottom_sec a{
-   position: relative;
-   font-weight: 100;
-   color: #999999;
-}
-.journal_card-area .card .card-span2 .bottom_sec a::before{
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background-color: #28b8d8;
-}
-/* Journal Section ends */
-
-/* Services and About Section Starts */
-
-#about_sec{
-    background-color: #f9f9f9;
-}
-#about_sec .row{
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 80px;
-}
-#about_sec .about_area,
-#about_sec .services_area{
-    width: 570px;
-}
-#about_sec .head{
-    text-align: left;
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight: bold;
-}
-#about_sec .head h2{
-    font-family: 'Roboto Condensed', sans-serif;
-}
-#about_sec .head h2::before{
-    width: 200px;
-    right: -215px;
-}
-#about_sec .head h2::after{
-    display: none;
-}
-#about_sec .about_area .wrapper{
-    display: flex;
-}
-#about_sec .about_area .about_img{
-    min-width: 200px;
-    margin-right: 25px;
-}
-#about_sec .about_area .about_img img{
-    width: 100%;
-}
-#about_sec .about_area .about_content h3{
-    font-family: 'Roboto Slab', serif;
-    font-size: 18px;
-    color: #666666;
-    font-weight: lighter;
-    padding-bottom: 25px;
-}
-#about_sec .about_area .about_content p{
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    color: #666666;
-    font-weight: normal;
-    line-height: 20px;
-}
-#about_sec .services_area .services_content .services{
-    display: flex;
-    justify-content: left;
-}
-#about_sec .services_area .services_content .services .icon{
-    width: 70px;
-}
-#about_sec .services_area .services_content .services .icon i{
-    font-size: 40px;
+    font-weight: 400;
     color: #ffffff;
-    stroke-width: ;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #28b8d8;
+    padding: 10px 15px;
+    background-color: #49cbcd;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
 }
-#about_sec .services_area .services_content .services .description{
-    width: 500px;
+     /*============================ media query css  ============================*/
+
+        /* Small devices (landscape phones, 576px and up) */
+        @media (max-width: 768px) {
+            #services-section .row-grid{
+            grid-template-columns: auto;
+            grid-template-rows: auto;
+            grid-column-gap: 30px;
+            grid-row-gap: 50px;
+            }
+            #services-section .services-area .services{
+                padding: 0 50px;
+            }
+            #services-section .services-area .services h2{
+                padding: 20px 0 15px 0;
+            }
+        }
+        
+        /* // Medium devices (tablets, 768px and up) */
+        @media (min-width: 768px) {
+            #services-section .services-area .services h2{
+                padding: 20px 0 18px 0;
+            }
+            #services-section .row-grid{
+            grid-template-columns: repeat(2, auto);
+            grid-template-rows: auto;
+            grid-column-gap: 30px;
+            grid-row-gap: 50px;
+            }
+            #services-section .services-area .services{
+                text-align: center;
+            }
+        }
+        
+        /* // Large devices (desktops, 992px and up) */
+        @media (min-width: 992px) {
+            #services-section .services-area .services h2{
+                padding: 25px 0 20px 0;
+            }
+            #services-section .row-grid{
+            grid-template-columns: repeat(2, auto);
+            grid-template-rows: auto;
+            grid-column-gap: 30px;
+            grid-row-gap: 50px;
+            }
+        }
+        
+        /*// Extra large devices (large desktops, 1200px and up) */
+        @media (min-width: 1200px) {
+            #services-section .services-area .services h2{
+                padding: 40px 0 20px 0;
+            }
+            #services-section .row-grid{
+            grid-template-columns: repeat(4, auto);
+            grid-template-rows: auto;
+            grid-gap: 30px;
+            }
+        }
+
+/* services section css ends */
+
+
+/* portfolio section css starts */
+#portfolio-section {
+    background-color: #f1f1f1;
 }
-#about_sec .services_area .services_content .services .description h4{
-    font-family: 'Roboto Slab', serif;
-    font-size: 17px;
-    color: #444444;
-    font-weight: bold;
-    padding-bottom: 18px;
+
+#portfolio-section .portfolio-area .card img{
+    width: 100%;
 }
-#about_sec .services_area .services_content .services .description p{
-    font-family: 'Roboto', sans-serif;
+#portfolio-section .more-works-btn{
+    text-align: center;
+    padding-top: 60px;
+}
+#portfolio-section .more-works-btn a{
+    padding: 20px 42px;
+    color: #ffffff;
+    background-color: #49cbcd;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+     /*============================ media query css  ============================*/
+
+        /* Small devices (landscape phones, 576px and up) */
+        @media (max-width: 768px) {
+            #portfolio-section .container{
+                padding: 60px 0;
+            }
+            #portfolio-section .portfolio-area .row-grid{
+                grid-template-columns: auto;
+                grid-template-rows: auto;
+                grid-column-gap: 30px;
+                grid-row-gap: 50px;
+            }
+            #portfolio-section .portfolio-area .card{
+                padding: 0 50px;
+            }
+            #portfolio-section .more-works-btn a{
+                padding: 10px 22px;
+            }
+        }
+        
+        /* // Medium devices (tablets, 768px and up) */
+        @media (min-width: 768px) {
+            #portfolio-section .container{
+                padding: 60px 0;
+            }
+            #portfolio-section .portfolio-area .row-grid{
+                grid-template-columns: repeat(2,auto);
+                grid-template-rows: auto;
+                grid-column-gap: 30px;
+                grid-row-gap: 50px;
+            }
+            #portfolio-section .portfolio-area .card{
+                padding: 0 30px;
+            }
+            #portfolio-section .more-works-btn a{
+                padding: 17px 32px;
+            }
+        }
+        
+        /* // Large devices (desktops, 992px and up) */
+        @media (min-width: 992px) {
+            #portfolio-section .container{
+                padding: 95px 0;
+            }
+            #portfolio-section .portfolio-area .row-grid{
+                grid-template-columns: repeat(3,auto);
+                grid-template-rows: auto;
+                grid-gap: 30px;
+            }
+        }
+        
+        /*// Extra large devices (large desktops, 1200px and up) */
+        @media (min-width: 1200px) {
+            #portfolio-section .container{
+                padding: 95px 0;
+            }
+            #portfolio-section .portfolio-area .row-grid{
+                grid-template-columns: repeat(3,auto);
+                grid-template-rows: auto;
+                grid-gap:30px;
+            }
+        }
+
+/* portfolio section css ends */
+
+
+/* teams section css starts */
+
+#teams-section .teams-area .card{
+    text-align: center;
+    color: #4e525d;
+}
+#teams-section .teams-area .card .img{
+    padding-bottom: 70px;
+}
+#teams-section .teams-area .card .img img{
+    max-width: 50%;
+}
+#teams-section .teams-area .card h3{
+    font-size: 22px;
+    font-weight: 400;
+    padding-bottom: 10px;
+}
+#teams-section .teams-area .card h6{
     font-size: 14px;
-    color: #666666;
-    font-weight: normal;
-    padding-bottom: 25px;
+    font-weight: 400;
+    padding-bottom: 35px;
+}
+#teams-section .teams-area .card p{
+    text-align: center;
+}
+     /*============================ media query css  ============================*/
+
+        /* Small devices (landscape phones, 576px and up) */
+        @media (max-width: 768px) {
+            #teams-section .container{
+                padding: 60px 0;
+            }
+            #teams-section .teams-area .row-grid{
+                grid-template-columns: auto;
+                grid-template-rows: auto;
+                grid-column-gap: 30px;
+                grid-row-gap: 50px;
+            }
+            #teams-section .teams-area .card{
+            padding: 0 50px;
+            }
+            #teams-section .teams-area .card .img{
+                padding-bottom: 30px;
+            }
+        }
+        
+        /* // Medium devices (tablets, 768px and up) */
+        @media (min-width: 768px) {
+            #teams-section .teams-area .card .img{
+                padding-bottom: 30px;
+            }
+            #teams-section .container{
+                padding: 60px 0;
+            }
+            #teams-section .teams-area .row-grid{
+                grid-template-columns: repeat(2,auto);
+                grid-template-rows: auto;
+                grid-column-gap: 30px;
+                grid-row-gap: 50px;
+            }
+            #teams-section .teams-area .card{
+            padding: 0 30px;
+            }
+        }
+        
+        /* // Large devices (desktops, 992px and up) */
+        @media (min-width: 992px) {
+            #teams-section .container{
+                padding: 95px 0;
+            }
+            #teams-section .teams-area .row-grid{
+            grid-template-columns: repeat(2,auto);
+            grid-template-rows: auto;
+            grid-column-gap: 30px;
+            grid-row-gap: 50px;
+            }
+            #teams-section .teams-area .card{
+            padding: 0 30px;
+            }
+        }
+        
+        /*// Extra large devices (large desktops, 1200px and up) */
+        @media (min-width: 1200px) {
+            #teams-section .container{
+                padding: 95px 0;
+            }
+            #teams-section .teams-area .row-grid{
+            grid-template-columns: repeat(4,auto);
+            grid-template-rows: auto;
+            grid-gap: 30px;
+            }
+        }
+
+/* teams section css ends */
+
+/* testimonials section css starts */
+#testimonials-section .container{
+    position: relative;
 }
 
-/* Services and About Section ends */
+#testimonials-section .container .left-btn{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+#testimonials-section .container .right-btn{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transition: all linear .3s;
+}
+#testimonials-section .container:hover .left-btn{
+    left: 1%;
+}
+#testimonials-section .container:hover .right-btn{
+    right: 1%;
+}
+#testimonials-section .container .left-btn,
+#testimonials-section .container .right-btn{
+    outline: none;
+}
+#testimonials-section .testimonials-area{
+    text-align: center;
+}
+#testimonials-section .testimonials-area p{
+    font-size: 19px;
+    font-weight: 400;
+    color: #4e525d;
+    line-height: 30px;
+}
+#testimonials-section .testimonials-area h3{
+    font-size: 21px;
+    font-weight: 400;
+    color: #9a8faf;
+    padding-top: 40px;
+}
+     /*============================ media query css  ============================*/
 
-/* footer section starts */
+        /* Small devices (landscape phones, 576px and up) */
+        @media (max-width: 768px) {
+            #testimonials-section .container{
+                position: relative;
+                padding: 60px 60px;
+            }
+        }
+        
+        /* // Medium devices (tablets, 768px and up) */
+        @media (min-width: 768px) {
+            #testimonials-section .container{
+                position: relative;
+                padding: 60px 70px;
+            }
+        }
+        
+        /* // Large devices (desktops, 992px and up) */
+        @media (min-width: 992px) {
+            #testimonials-section .container{
+                position: relative;
+                padding: 95px 80px;
+            }
+        }
+        
+        /*// Extra large devices (large desktops, 1200px and up) */
+        @media (min-width: 1200px) {
+            #testimonials-section .container{
+                position: relative;
+                padding: 95px 80px;
+            }
+        }
 
-#footer_sec{
-    background-color: #373737;
+/* testimonials section css ends */
+
+
+/* contacts section css starts */
+
+#contacts-section .jumbotron{
+    background: url(../images/footerbg.jpg) no-repeat center ;
+    background-size: cover;
 }
-#footer_sec .row{
-    display: flex;
-    justify-content: space-between;
-    padding: 70px 0;
+#contacts-section .contacts-area .left-side{
+    width: 50%;
+    padding-right: 150px;
 }
-#footer_sec .card{
-    width: 260px;
+#contacts-section .contacts-area .left-side h4{
+    font-size: 42px;
+    font-weight: 400;
+    color: #ffffff;
+    padding-bottom: 10px;
 }
-#footer_sec .card h3{
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 16px;
-    color: #f0f0f0;
-    font-weight: bold;
-    padding-bottom: 25px;
-    text-transform: uppercase;
-}
-#footer_sec .card p{
-    font-family: 'Roboto', sans-serif;
+#contacts-section .contacts-area .left-side p {
     font-size: 14px;
-    color: #cacaca;
-    font-weight: normal;
-    padding-bottom: 30px;
+    font-weight: 400;
+    color: #7e7e7e;
     line-height: 25px;
 }
-}
-#footer_sec .card p:last-child{
-    padding-bottom: 0;
-}
-
-/* footer section ends */
-
-/* copyright section starts */
-
-#copyright_sec{
-    background-color: #333333;
-    padding: 30px;
-}
-#copyright_sec .row{
-    padding: 30px;
-}
-#copyright_sec h6{
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    color: #cacaca;
-    font-weight: normal;
+#contacts-section .contacts-area .left-side .links{
     text-align: left;
+    padding: 40px 0;
 }
-/* copyright section ends */
+#contacts-section .contacts-area .left-side .links a{
+    width: 45px;
+    height: 45px;
+    color: #ffffff;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    text-align: center;
+    margin-right: 15px;
+}
+#contacts-section .contacts-area .left-side .links a{
+    line-height: 45px;
+}
+#contacts-section .contacts-area .left-side .links a.facebook{
+    background-color: #3b5997 ;
+}
+#contacts-section .contacts-area .left-side .links a.twitter{
+    background-color: #3ec2f3 ;
+}
+#contacts-section .contacts-area .left-side .links a.google-plus{
+    background-color: #e44c41;
+}
+#contacts-section .contacts-area .left-side .contact a{
+    display: block;
+    font-size: 14px;
+    color: #bface2;
+    padding: 5px 0;
+}
+#contacts-section .contacts-area .right-side{
+    width: 50%;
+}
+#contacts-section .contacts-area .right-side .top-part{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+#contacts-section .contacts-area .right-side .top-part input{
+    width: 48%;
+    border:none;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    padding: 10px;
+}
+#contacts-section .contacts-area .right-side input::placeholder,
+#contacts-section .contacts-area .right-side textarea::placeholder{
+    font-size: 16px;
+    color: #c1c1c1;
+}
+#contacts-section .contacts-area .right-side textarea{
+    width: 100%;
+    height: 160px;
+    resize: none;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+#contacts-section .contacts-area .right-side .submit-part{
+    display: flex;
+    justify-content: flex-end;
+}
+#contacts-section .contacts-area .right-side .submit-part #submit-btn{
+    padding: 15px 50px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    cursor: pointer;
+    background-color: #49cbcd;
+    color: #f1f1f1;
+    font-size: 22px;
+}
+     /*============================ media query css  ============================*/
+
+        /* Small devices (landscape phones, 576px and up) */
+        @media (max-width: 768px) {
+            #contacts-section .container{
+                padding: 60px 30px;
+            }
+            #contacts-section .contacts-area .left-side{
+                width: 100%;
+                padding-right: 0;
+                text-align: center;
+                margin-bottom: 50px;
+            }
+            #contacts-section .contacts-area .left-side .links{
+                text-align: center;
+            }
+            #contacts-section .contacts-area .right-side{
+                width: 100%;
+            }
+        }
+        
+        /* // Medium devices (tablets, 768px and up) */
+        @media (min-width: 768px) {
+            #contacts-section .container{
+                padding: 60px 30px;
+            }
+            #contacts-section .contacts-area .left-side{
+                width: 100%;
+                padding-right: 0;
+                text-align: center;
+                margin-bottom: 50px;
+            }
+            #contacts-section .contacts-area .left-side .links{
+                text-align: center;
+            }
+            #contacts-section .contacts-area .right-side{
+                width: 100%;
+            }
+        }
+        
+        /* // Large devices (desktops, 992px and up) */
+        @media (min-width: 992px) {
+            #contacts-section .container{
+                padding: 95px 0;
+            }
+        }
+        
+        /*// Extra large devices (large desktops, 1200px and up) */
+        @media (min-width: 1200px) {
+            #contacts-section .container{
+                padding: 95px 0;
+            }
+        }
+
+/* contacts section css ends */
+
+
+
