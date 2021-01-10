@@ -7,13 +7,14 @@
 
 /* Main Styling */
 html,body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
   line-height: 1.7em;
 }
 
 a {
   color: #333;
   text-decoration: none;
+  display: inline-block;
 }
 
 h1, h2, h3 {
@@ -261,6 +262,11 @@ p {
 #contact-form textarea:focus {
   outline: none;
   border-color: #f7c08a;
+}
+
+#contact-info a{
+  margin: 10px 0;
+  color: #fff;
 }
 
 /* Footer */
