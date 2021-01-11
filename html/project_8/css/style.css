@@ -851,12 +851,26 @@ button:focus,input:focus,textarea:focus{
             #contacts-section .container{
                 padding: 95px 0;
             }
+            #contacts-section .contacts-area .right-side{
+                width: 50%;
+            }
+            #contacts-section .contacts-area .left-side{
+                width: 50%;
+                padding-right: 150px;
+            }
         }
         
         /*// Extra large devices (large desktops, 1200px and up) */
         @media (min-width: 1200px) {
             #contacts-section .container{
                 padding: 95px 0;
+            }
+            #contacts-section .contacts-area .right-side{
+                width: 50%;
+            }
+            #contacts-section .contacts-area .left-side{
+                width: 50%;
+                padding-right: 150px;
             }
         }
 
