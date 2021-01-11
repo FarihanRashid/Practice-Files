@@ -482,10 +482,36 @@ button:focus,input:focus,textarea:focus{
     color: #4e525d;
 }
 #teams-section .teams-area .card .img{
-    padding-bottom: 70px;
+    margin-bottom: 30px;
+    position: relative;
+    width: 100%;
+    height: min-content;
 }
 #teams-section .teams-area .card .img img{
-    max-width: 50%;
+    width: 70%;
+}
+#teams-section .teams-area .card .img i{
+    font-size: 30px;
+    color: #e44c41;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+    -moz-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    -o-transform: translate(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+#teams-section .teams-area .card .img:hover i{
+    opacity: 1;
+    visibility: visible;
 }
 #teams-section .teams-area .card h3{
     font-size: 22px;
@@ -517,14 +543,14 @@ button:focus,input:focus,textarea:focus{
             padding: 0 50px;
             }
             #teams-section .teams-area .card .img{
-                padding-bottom: 30px;
+                margin-bottom: 20px;
             }
         }
         
         /* // Medium devices (tablets, 768px and up) */
         @media (min-width: 768px) {
             #teams-section .teams-area .card .img{
-                padding-bottom: 30px;
+                margin-bottom:20px;
             }
             #teams-section .container{
                 padding: 60px 0;
