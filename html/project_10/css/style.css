@@ -418,7 +418,7 @@ button:focus,input:focus,textarea:focus{
 #testimonials_sec .testimonials_area .content h3{
     font-family: var(--fontFamilyRoboto);
     font-size: 24px;
-    font-weight: 200;
+    font-weight: 300;
     font-style: italic;
     color: #999999;
     line-height: 36px;
@@ -573,7 +573,7 @@ button:focus,input:focus,textarea:focus{
 #portfolio_sec .portfolio_area .works .overlay p{
     font-family: var(--fontFamilyRoboto);
     font-size: 15px;
-    font-weight: 200;
+    font-weight: 300;
     font-style: italic;
     color: #ffffff;
     padding-top: 10px;
@@ -654,7 +654,7 @@ button:focus,input:focus,textarea:focus{
 #footer_sec .about_part .follow_us h6{
     font-family: var(--fontFamilyRoboto);
     font-size: 15px;
-    font-weight: 200;
+    font-weight: 300;
     font-style: italic;
     color: #999999;
     margin-right: 15px;
@@ -679,13 +679,13 @@ button:focus,input:focus,textarea:focus{
 #footer_sec .about_part .subscribe_form form input::placeholder{
     font-family: var(--fontFamilyRoboto);
     font-size: 15px ;
-    font-weight: 200;
+    font-weight: 300;
     color: #cccccc;
 }
 #footer_sec .about_part .subscribe_form form input::placeholder{
     font-family: var(--fontFamilyRoboto);
     font-size: 15px ;
-    font-weight: 200;
+    font-weight: 300;
     color: #cccccc;
 }
 #footer_sec .about_part .subscribe_form form button{
@@ -737,7 +737,7 @@ button:focus,input:focus,textarea:focus{
 #footer_sec .blog_part .blog_content .posts .content span{
     font-family: var(--fontFamilyRoboto);
     font-size: 13px;
-    font-weight: 200;
+    font-weight: 300;
     font-style: italic;
     color: #999999;
     line-height: 24px;
@@ -757,7 +757,7 @@ button:focus,input:focus,textarea:focus{
 #footer_sec .insta_part a{
     font-family: var(--fontFamilyRoboto);
     font-size: 13px;
-    font-weight: 200;
+    font-weight: 300;
     font-style: italic;
     color: #333333;
     margin-top: 20px;
