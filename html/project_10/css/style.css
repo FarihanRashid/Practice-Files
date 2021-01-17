@@ -165,9 +165,9 @@ button:focus,input:focus,textarea:focus{
     justify-content: center;
     align-items:center;
 }
-@media(max-height: 560px ){
+@media(max-height: 570px ){
     #cta_sec .row{
-        padding-bottom: 200px;
+        padding: 100px 0 200px 0;
         height: 100%;
     }
 }
@@ -534,6 +534,7 @@ button:focus,input:focus,textarea:focus{
 }
 #portfolio_sec .portfolio_area .works{
     position: relative;
+    overflow: hidden;
 }
 #portfolio_sec .portfolio_area .works .overlay{
     position: absolute;
@@ -586,6 +587,7 @@ button:focus,input:focus,textarea:focus{
 #portfolio_sec .portfolio_area .works .overlay a:hover h5,
 #portfolio_sec .portfolio_area .works .overlay a:hover p{
     color:var(--mainYellowColor);
+    text-shadow: 1px 1px 5px #333333;
 }
 #portfolio_sec .portfolio_area .works .overlay a svg path{
     transition: all linear .3s;
@@ -594,8 +596,20 @@ button:focus,input:focus,textarea:focus{
     -ms-transition: all linear .3s;
     -o-transition: all linear .3s;
 }
+#portfolio_sec .portfolio_area .works .overlay a svg{
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+#portfolio_sec .portfolio_area .works .overlay a:hover svg{
+    filter: drop-shadow(1px 1px 5px #333333);
+    -webkit-filter: drop-shadow(1px 1px 5px #333333);
+}
 #portfolio_sec .portfolio_area .works .overlay a:hover svg path{
     fill: var(--mainYellowColor);
+    
 }
 #portfolio_sec .portfolio_area .works:hover .overlay{
     opacity: 1;
@@ -761,6 +775,14 @@ button:focus,input:focus,textarea:focus{
     font-style: italic;
     color: #333333;
     margin-top: 20px;
+    transition: all linear .2s;
+    -webkit-transition: all linear .2s;
+    -moz-transition: all linear .2s;
+    -ms-transition: all linear .2s;
+    -o-transition: all linear .2s;
+}
+#footer_sec .insta_part a:hover{
+    color: var(--mainRedColor);
 }
 #footer_sec .copyright_sec{
     padding: 25px 0;
