@@ -5,12 +5,16 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
 ul,ol{
     list-style: none;
 }
 
 a{
     text-decoration: none;
+    display: inline-block;
 }
 
 
@@ -18,38 +22,47 @@ a{
 
 .full-wrapper{
     background: radial-gradient(circle, rgba(188,231,39,0.9192051820728291) 0%, rgba(217,82,48,0.969625350140056) 73%);
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
 }
 
 .form-wrapper{
-    padding: 100px;
+    padding: 80px ;
     margin: 0 auto;
     width: fit-content;
-}
-
-.form-wrapper .form_1{
+    display: flex;
+    justify-content: center;
+    align-items: center ;
     border: .5px solid rgb(92, 92, 92);
     box-shadow: 5px 18px 10px 0px #585858;
-    padding: 100px;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
     background-color: rgb(183, 243, 253);
+    width: 800px;
+    height: 800px;
+}
+
+.form-wrapper .form_1{
+    margin: 0 auto;
+    text-align: center;
+    
 }
 .form-wrapper .form_1 input{
     width: 300px;
     padding: 10px;
-    margin-bottom: 20px;
+    margin: 0 auto 20px auto;
+    display: block;
 }
 .form-wrapper .form_1 #submit_btn{
     padding: 10px 20px;
     background-color: turquoise;
     border: 2px solid #000;
     display: flex;
+    margin: 0 auto;
 }
 
 .form-wrapper .form_1 .form-error-message2{
@@ -63,6 +76,46 @@ a{
     font-style: italic;
     font-size: 16px;
 }
+.form-wrapper .form_1 label{
+    font-size: 18px;
+}
+.form-wrapper .form_1 .pass-wrapper{
+    position: relative;
+    width: min-content;
+    margin: 0 auto;
+}
+.form-wrapper .form_1 .pass-wrapper i{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 9999;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+.gender-radio-heading{
+    font-weight: normal;
+    padding-bottom: 10px;
+}
 
+.form-wrapper .form_1 .gender-area label{
+    display: inline-block;
+    width: 100px;
+}
 
+.form-wrapper .form_1 .gender-area input{
+    display: inline-block;
+    width: min-content;
+}
+#message-box{
+    display: block;
+    resize: none;
+    width: 300px;
+    height: 80px;
+    margin: 20px auto;
+    padding: 10px;
+}
 

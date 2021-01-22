@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practice Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -13,9 +14,37 @@
             <form action="" name="form_1" class="form_1">
                 <input type="text" class="name input" placeholder="Enter your full name" name="input" id="name">
                 <div class="form-error-message"></div>
-                <input type="email" class="email input" placeholder="Enter your email" name="input" id="email">
+                <input type="text" class="email input" placeholder="Enter your email" name="input" id="email">
                 <div class="form-error-message"></div>
-                
+                <div class="pass-wrapper">
+                    <input type="password" name="password" id="password" placeholder="Enter your Password">
+                    <i class="fa fa-eye" onclick="showpass1()"></i>
+                </div>
+                <div class="form-error-message"></div>
+                <div class="pass-wrapper">
+                    <input type="password" name="password" id="password-copy" placeholder="Confirm your Password">
+                    <i class="fa fa-eye" onclick="showpass2()"></i>
+                </div>
+                <div class="form-error-message"></div>
+                <h2 class="gender-radio-heading">Select ur gender</h2>
+                <div class="gender-area">
+                    <div class="box">
+                        <label for="male">Male</label>
+                        <input type="radio" name="gender" id="male" class="gender">
+                    </div>
+                    <div class="box">
+                    <label for="female">Female</label>
+                    <input type="radio" name="gender" id="female" class="gender">
+                    </div>
+                    <div class="box">
+                        <label for="Other">Other</label>
+                        <input type="radio" name="gender" id="Other" class="gender">
+                    </div>
+                </div>
+                <div class="form-error-message"></div>
+                <label for="message_box">Enter ur message(min word=10 and max word = 50)</label>
+                <textarea name="text-area" id="message-box" placeholder="Message box"></textarea>
+                <div class="form-error-message"></div>
                 <!-- method 1 button html -->
                 <button type="submit" id="submit_btn" onclick="return submission()">Submit</button>
     
