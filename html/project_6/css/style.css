@@ -16,7 +16,9 @@ a{
     text-decoration: none;
     display: inline-block;
 }
-
+input:focus{
+    outline: none;
+}
 
 /* common css ends */
 

@@ -27,6 +27,7 @@ function submission(){
             form_input1.style.borderColor = "red";
             error[0].innerHTML = "Enter Your Full Name";
             error[0].classList.add("form-error-message2");
+            form_input1.focus();
         }
     }
     function errValid2(){
@@ -43,12 +44,14 @@ function submission(){
                 form_input2.style.borderColor = "red";
                 error[1].innerHTML = "Enter appropriate Email";
                 error[1].classList.add("form-error-message2");
+                form_input2.focus();
             };
         }
         else if(form_input2.value == ""){
             form_input2.style.borderColor = "red";
             error[1].innerHTML = "Enter Email";
             error[1].classList.add("form-error-message2");
+            form_input2.focus();
         };
         
     }
@@ -74,7 +77,7 @@ function submission(){
     };
     if(password.value == ''){
         error[2].innerHTML = "Enter Password";
-        form_input2.style.borderColor = "red";
+        password.style.borderColor = "red";
         error[2].classList.add("form-error-message2");
         if(!passwordCopy.value == ''){
             error[2].innerHTML = "Enter Password First";
@@ -90,23 +93,44 @@ function submission(){
     
     if(!upper.test(password.value) || !lower.test(password.value) || !specialChar.test(password.value) || !num.test(password.value) || !minChar){
         error[2].innerHTML = "Password must contain UpperCase!" + "<br>"+" LowerCase! Numbers!" + "<br>"+" Special Character and " + "<br>"+"Minimum 8 Character";
-        form_input2.style.borderColor = "red";
+        password.style.borderColor = "red";
         error[2].classList.add("form-error-message2");
+        password.focus();
         return false;
     }
     else{
         error[2].innerHTML ="";
         error[2].classList.remove("form-error-message2");
+        password.style.borderColor = "#01991b";
     };
     if(password.value != passwordCopy.value){
         error[3].innerHTML = "Password does not match!";
-        form_input2.style.borderColor = "red";
+        passwordCopy.style.borderColor = "red";
         error[3].classList.add("form-error-message2");
+        passwordCopy.focus();
         return false;
     }
     else{
         error[3].innerHTML = "";
         error[3].classList.remove("form-error-message2");
+        passwordCopy.style.borderColor = "#01991b";
+    };
+    if(messageBox.value == ''){
+        error[5].innerHTML = "Enter a message";
+        error[5].classList.add("form-error-message2");
+        return false;
+    }
+    else if(messageBox.value.length < 10 || messageBox.value.length > 50){
+        error[5].innerHTML = "Enter a message between 10 and 50 words";
+        messageBox.style.borderColor = "red";
+        error[5].classList.add("form-error-message2");
+        messageBox.focus();
+        return false;
+    }
+    else{
+        error[5].innerHTML = "";
+        messageBox.style.borderColor = "01991b";
+        error[5].classList.remove("form-error-message2");
     };
     function genderValidate(){
         var formValid = false;
@@ -119,29 +143,17 @@ function submission(){
         };
         if(!formValid){
             error[4].innerHTML = "Must check some option";
-            form_input2.style.borderColor = "red";
             error[4].classList.add("form-error-message2");
             return false;
         }
         else{
             error[4].innerHTML = "";
             error[4].classList.remove("form-error-message2");
-        }
-        return formValid;
+            return formValid;
+        };
     }
     genderValidate();
-    if(messageBox.value == ''){
-        error[5].innerHTML = "Enter a message";
-        form_input2.style.borderColor = "red";
-        error[5].classList.add("form-error-message2");
-        return false;
-    }
-    else if(messageBox.value.length < 10 && messageBox.value.length > 50){
-        error[5].innerHTML = "Enter a message between 10 and 50 words";
-        form_input2.style.borderColor = "red";
-        error[5].classList.add("form-error-message2");
-        return false;
-    }   
+    
 }
 function showpass1(){
     if(password.type == 'password'){
