@@ -115,23 +115,6 @@ function submission(){
         error[3].classList.remove("form-error-message2");
         passwordCopy.style.borderColor = "#01991b";
     };
-    if(messageBox.value == ''){
-        error[5].innerHTML = "Enter a message";
-        error[5].classList.add("form-error-message2");
-        return false;
-    }
-    else if(messageBox.value.length < 10 || messageBox.value.length > 50){
-        error[5].innerHTML = "Enter a message between 10 and 50 words";
-        messageBox.style.borderColor = "red";
-        error[5].classList.add("form-error-message2");
-        messageBox.focus();
-        return false;
-    }
-    else{
-        error[5].innerHTML = "";
-        messageBox.style.borderColor = "01991b";
-        error[5].classList.remove("form-error-message2");
-    };
     function genderValidate(){
         var formValid = false;
         var i = 0;
@@ -153,6 +136,23 @@ function submission(){
         };
     }
     genderValidate();
+    if(messageBox.value == ''){
+        error[5].innerHTML = "Enter a message";
+        error[5].classList.add("form-error-message2");
+        return false;
+    }
+    else if(messageBox.value.length < 10 || messageBox.value.length > 50){
+        error[5].innerHTML = "Enter a message between 10 and 50 words";
+        messageBox.style.borderColor = "red";
+        error[5].classList.add("form-error-message2");
+        messageBox.focus();
+        return false;
+    }
+    else{
+        error[5].innerHTML = "";
+        messageBox.style.borderColor = "01991b";
+        error[5].classList.remove("form-error-message2");
+    };
     
 }
 function showpass1(){
