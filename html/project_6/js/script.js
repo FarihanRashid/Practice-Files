@@ -115,27 +115,25 @@ function submission(){
         error[3].classList.remove("form-error-message2");
         passwordCopy.style.borderColor = "#01991b";
     };
-    function genderValidate(){
-        var formValid = false;
-        var i = 0;
-        while (!formValid && i < genderBtn.length) {
-            if (genderBtn[i].checked){
-                formValid = true;
-            }
-            i++;        
-        };
-        if(!formValid){
-            error[4].innerHTML = "Must check some option";
-            error[4].classList.add("form-error-message2");
-            return false;
+    var formValid = false;
+    var i = 0;
+    while (!formValid && i < genderBtn.length) {
+        if (genderBtn[i].checked){
+        formValid = true;
         }
-        else{
-            error[4].innerHTML = "";
-            error[4].classList.remove("form-error-message2");
-            return formValid;
-        };
+        i++;        
+    };
+    if(!formValid){
+        error[4].innerHTML = "Must check some option";
+        error[4].classList.add("form-error-message2");
+        return false;
     }
-    genderValidate();
+    else{
+        error[4].innerHTML = "";
+        error[4].classList.remove("form-error-message2");
+    };
+
+    
     if(messageBox.value == ''){
         error[5].innerHTML = "Enter a message";
         error[5].classList.add("form-error-message2");
