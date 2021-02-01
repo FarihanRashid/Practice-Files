@@ -642,11 +642,27 @@ footer img{
     left: 0;
     width: 100%;
 }
+#header_sec.bg{
+    background-color: rgb(255, 119, 119);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-bottom: 20px;
+    z-index: 999;
+    animation: bg-in 1s;
+    -webkit-animation: bg-in 1s;
+}
+@keyframes bg-in{
+    from{top:-50px}
+    to{top:0}
+}
 #header_sec .row .logo{
     width: 40%;
     height: inherit;
     display: flex;
     align-items: center;
+    margin-bottom: -10px;
 }
 #header_sec .row .navbar{
     width: 60%;
