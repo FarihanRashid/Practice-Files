@@ -81,7 +81,7 @@ button:focus,input:focus,textarea:focus{
     background-color: #1E0731;
     top: 0;
     left: 0;
-    z-index: 999999;
+    z-index: 9999999999;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -636,14 +636,15 @@ footer img{
 .fullwrapper_header .overlay{
     background: var(--backgroundGradient);
 }
-#header_sec{
+#header_sec,
+#header_sec_copy{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
 }
-#header_sec.bg{
-    background-color: rgb(255, 119, 119);
+#header_sec_copy.bg{
+    background-color:#1E0731;
     position: fixed;
     top: 0;
     left: 0;
@@ -653,25 +654,29 @@ footer img{
     animation: bg-in 1s;
     -webkit-animation: bg-in 1s;
 }
-@keyframes bg-in{
+/* @keyframes bg-in{
     from{top:-100px}
     to{top:0}
-}
-#header_sec .row .logo{
+} */
+#header_sec .row .logo,
+#header_sec_copy .row .logo{
     width: 40%;
     height: inherit;
     display: flex;
     align-items: center;
     margin-bottom: -10px;
 }
-#header_sec .row .navbar{
+#header_sec .row .navbar,
+#header_sec_copy .row .navbar{
     width: 60%;
 }
-#header_sec .row .navbar ul{
+#header_sec .row .navbar ul,
+#header_sec_copy .row .navbar ul{
     display: flex;
     justify-content: flex-end;
 }
-#header_sec .row .navbar ul a{
+#header_sec .row .navbar ul a,
+#header_sec_copy .row .navbar ul a{
     font-family: var(--fontFamilyMontserrat);
     font-weight: 400;
     font-size: 14px;
@@ -687,7 +692,8 @@ footer img{
     -ms-transition: all linear .3s;
     -o-transition: all linear .3s;
 }
-#header_sec .row .navbar ul a::before{
+#header_sec .row .navbar ul a::before,
+#header_sec_copy .row .navbar ul a::before{
     content: '';
     position: absolute;
     bottom: 0;
@@ -698,10 +704,12 @@ footer img{
     opacity: 0;
     transition: all linear .3s;
 }
-#header_sec .row .navbar ul a:hover{
+#header_sec .row .navbar ul a:hover,
+#header_sec_copy .row .navbar ul a:hover{
     color: var(--mainYellowColor);
 }
-#header_sec .row .navbar ul a:hover::before {
+#header_sec .row .navbar ul a:hover::before ,
+#header_sec_copy .row .navbar ul a:hover::before {
     opacity: 1;
     left: 0;
 }

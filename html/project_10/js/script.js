@@ -7,7 +7,7 @@ $(function(){
     $(window).on('scroll', function(){
         var scrolling = $(this).scrollTop();
         var viewportHeight= window.innerHeight-100 ;
-        var viewportHeight200= viewportHeight + 150;
+        var viewportHeight200= viewportHeight + 100;
         if(scrolling > viewportHeight200){
             $('.back-to-top').fadeIn(500);
         }
@@ -15,10 +15,10 @@ $(function(){
             $('.back-to-top').fadeOut(500);
         }
         if(scrolling > viewportHeight){
-            $('#header_sec').addClass('bg');
+            $('#header_sec_copy').addClass('bg').slideDown(800);
         }
         else {
-            $('#header_sec').removeClass('bg');
+            $('#header_sec_copy').slideUp(500);
         }
     
     });
