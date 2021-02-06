@@ -54,9 +54,9 @@ $(function () {
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 2000,
-        arrows:false,
-        speed:1000,
-        dots:false,
+        arrows: false,
+        speed: 1000,
+        dots: false,
     });
 
     // testimonial slider js
@@ -65,16 +65,16 @@ $(function () {
         slidesToScroll: 1,
         autoplay: false,
         autoplaySpeed: 2000,
-        arrows:true,
-        speed:1000,
-        prevArrow:'.left_button',
-        nextArrow:'.right_button',
-        dots:true,
+        arrows: true,
+        speed: 1000,
+        prevArrow: '.left_button',
+        nextArrow: '.right_button',
+        dots: true,
     });
 
     $('#testimonials_sec .slick-dots li button').text('')
 
-    
+
     // counterup js
     $('.counter').counterUp({
         delay: 2,
