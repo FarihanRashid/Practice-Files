@@ -40,8 +40,8 @@ $(function () {
 
     // preloader js
     $(window).on('load', function () {
-        $('.preloader').delay(20).fadeOut(500);
-        // $('html, body').delay(20).animate({ scrollTop: 0 }, 1000);
+        $('.preloader').delay(2000).fadeOut(500);
+        $('html, body').delay(2000).animate({ scrollTop: 0 }, 1000);
     });
 
     // venobox js
