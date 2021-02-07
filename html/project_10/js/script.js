@@ -41,7 +41,7 @@ $(function () {
     // preloader js
     $(window).on('load', function () {
         $('.preloader').delay(2000).fadeOut(500);
-        $('html, body').delay(2000).animate({ scrollTop: 0 }, 1000);
+        $('html, body').delay(1000).animate({ scrollTop: 0 }, 1000);
     });
 
     // venobox js
