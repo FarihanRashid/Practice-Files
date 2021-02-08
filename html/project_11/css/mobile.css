@@ -33,7 +33,7 @@
   }
 
   #showcase .showcase-content {
-    top: 110px;
+    padding-top: 110px;
   }
 
   #who {
@@ -63,9 +63,8 @@
 }
 
 @media(max-height: 568px) {
-  #showcase .showcase-content {
-    margin-top: -2rem;
-    top: 140px;
+  #showcase{
+    height: 500px;
   }
 
   .l-heading {
