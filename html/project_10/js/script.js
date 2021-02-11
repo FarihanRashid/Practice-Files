@@ -3,7 +3,7 @@ $(function () {
     $('.back-to-top').on('click', function () {
         $('html, body').animate({ scrollTop: 0 }, 1000);
     });
-
+    
     $(window).on('scroll', function () {
         var scrolling = $(this).scrollTop();
         var viewportHeight = window.innerHeight - 100;
@@ -22,6 +22,8 @@ $(function () {
         }
 
     });
+
+    // $('body').addClass('overflow-hidden');
 
     //animation scroll js
     var html_body = $('html, body');
@@ -42,6 +44,9 @@ $(function () {
     $(window).on('load', function () {
         $('.preloader').delay(2000).fadeOut(500);
         $('html, body').delay(1000).animate({ scrollTop: 0 }, 1000);
+        setTimeout(function(){
+            $('body').removeClass('overflow-hidden');
+        },2000);
     });
 
     // venobox js
@@ -70,6 +75,32 @@ $(function () {
         prevArrow: '.left_button',
         nextArrow: '.right_button',
         dots: true,
+    });
+    // clients sec slider js
+    $('#clients-sec .client-logos-slider').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        arrows: true,
+        dots: false,
+        vertical:true,
+        verticalSwiping:true,
+        centerMode: true,
+        asNavFor: '.client-description-slider',
+        prevArrow: '#clients-sec .client-slider-area .client-description-slider-wrapper .up_button',
+        nextArrow: '#clients-sec .client-slider-area .client-description-slider-wrapper .down_button',
+    });
+    $('#clients-sec .client-description-slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        arrows: false,
+        dots: false,
+        focusOnSelect: true,
+        vertical:true,
+        asNavFor: '.client-logos-slider',
     });
 
     $('#testimonials_sec .slick-dots li button').text('')

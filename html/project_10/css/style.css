@@ -24,9 +24,6 @@ body{
 li,ol{
     list-style: none;
 }
-/* body{
-    overflow: hidden;
-} */
 a{
     text-decoration: none;
     display: inline-block;
@@ -44,6 +41,9 @@ a{
 }
 img{
     vertical-align: middle;
+}
+.overflow-hidden{
+    overflow: hidden;
 }
 button,input,textarea,
 button:focus,input:focus,textarea:focus{
@@ -1320,6 +1320,128 @@ button:focus,input:focus,textarea:focus{
     cursor: pointer;
 }
 /* plyr video ends */
+
+/* clients section starts */
+#clients-sec .client-slider-area{
+    padding-bottom: 100px;
+}
+#clients-sec .client-slider-area *{
+    outline: none;
+}
+#clients-sec .client-slider-area{
+    display: flex;
+    justify-content: space-between;
+}
+#clients-sec .client-slider-area .client-logos-slider{
+    max-width: 30%;
+}
+#clients-sec .client-slider-area .client-logos-slider .client{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+#clients-sec .client-slider-area .client-logos-slider .client img{
+    width: 40%;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+#clients-sec .client-slider-area .client-description-slider-wrapper{
+    max-width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    position: relative;
+}
+#clients-sec .client-slider-area .client-description-slider-wrapper .up_button{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50px;
+    z-index: 999;
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    cursor: pointer;
+}
+#clients-sec .client-slider-area .client-description-slider-wrapper .down_button{
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 50px;
+    z-index: 999;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    cursor: pointer;
+}
+#clients-sec .client-slider-area .client-description-slider-wrapper .up_button img{
+    width: 100%;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+}
+#clients-sec .client-slider-area .client-description-slider-wrapper .down_button img{
+    width: 100%;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+}
+
+#clients-sec .client-slider-area .client-description-slider-wrapper .client-description-slider{
+    padding: 30px;
+    background-color: var(--mainBlueColor);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    width: 100%;
+}
+#clients-sec .client-slider-area .client-description-slider-wrapper .client-description-slider::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    transform: translateY(-50%)rotate(45deg);
+    width: 40px;
+    height: 40px;
+    z-index: -9;
+    background-color: var(--mainBlueColor);
+    -webkit-transform: translateY(-50%)rotate(45deg);
+    -moz-transform: translateY(-50%)rotate(45deg);
+    -ms-transform: translateY(-50%)rotate(45deg);
+    -o-transform: translateY(-50%)rotate(45deg);
+}
+#clients-sec .client-slider-area .client-description-slider h3 {
+    font-family: var(--fontFamilyMontserrat);
+    font-size: 30px;
+    font-weight: 600;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+}
+#clients-sec .client-slider-area .client-description-slider h5{
+    font-family: var(--fontFamilyRoboto);
+    font-size: 22px;
+    font-weight: 400;
+    padding-bottom: 30px;
+}
+#clients-sec .client-slider-area .client-description-slider p{
+    font-family: var(--fontFamilyRoboto);
+    font-size: 18px;
+    font-weight: 300;
+}
+/* clients section ends */
 
 /* footer section starts */
 #footer_sec{
