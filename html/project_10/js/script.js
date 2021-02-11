@@ -23,8 +23,6 @@ $(function () {
 
     });
 
-    // $('body').addClass('overflow-hidden');
-
     //animation scroll js
     var html_body = $('html, body');
     $('.navbar a').on('click', function () {
