@@ -1339,6 +1339,8 @@ button:focus,input:focus,textarea:focus{
     padding: 20px;
     display: flex;
     justify-content: center;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
 }
 #clients-sec .client-slider-area .client-logos-slider .client img{
     width: 40%;
@@ -1348,6 +1350,15 @@ button:focus,input:focus,textarea:focus{
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
 }
+#clients-sec .client-slider-area .client-logos-slider .client.slick-center{
+    filter: blur(0);
+    -webkit-filter: blur(0);
+}   
+#clients-sec .client-slider-area .client-logos-slider .client.slick-center img{
+    filter: blur(0);
+    -webkit-filter: blur(0);
+    box-shadow: 0px 0px 53px 1px rgb(18, 17, 19);
+}   
 #clients-sec .client-slider-area .client-description-slider-wrapper{
     max-width: 70%;
     display: flex;
