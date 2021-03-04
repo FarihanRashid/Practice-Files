@@ -1,0 +1,237 @@
+@media(min-width:1200px) and (max-width:1399.98px){
+    #banner .content h1 {
+        font-size: 48px;
+    }
+}
+
+@media(min-width:992px) and (max-width:1199.98px){
+    #banner .content h3 {
+        font-size: 30px;
+    }
+    #banner .content h1 {
+        font-size: 40px;
+    }
+    #blog-sec .card-title {
+        line-height: 26px;
+    }
+    #footer {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+}
+
+@media(min-width:768px) and (max-width:991.98px){
+    .main-navbar .navbar {
+        padding-top: 10px;
+    }
+    .main-navbar .navbar-toggler i {
+        color: #fff;
+    }
+    .main-navbar .navbar-toggler:focus {
+        box-shadow:none;
+    }
+    .main-navbar .navbar-brand img {
+        width: 120px;
+    }
+    .main-navbar .navbar-nav {
+        background: #998675;
+        text-align: center;
+        padding:20px 0;
+    }
+    .main-navbar.navbar-expand-lg .navbar-nav .nav-link {
+        padding-left: 0;
+    }
+    #video-sec {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    #blog-sec .card-title {
+        line-height: 26px;
+    }
+    #copyright .copyright-left p {
+        line-height: 60px;
+        text-align: center;
+    }
+    #copyright .copyright-right p {
+        line-height: 60px;
+        text-align: center;
+    }
+    #footer {
+        padding-top: 40px;
+        padding-bottom: 30px;
+    }
+}
+
+@media(min-width:576px) and (max-width:767.98px){
+    .main-navbar .navbar {
+        padding-top: 10px;
+    }
+    .main-navbar .navbar-toggler i {
+        color: #fff;
+    }
+    .main-navbar .navbar-toggler:focus {
+        box-shadow:none;
+    }
+    .main-navbar .navbar-brand img {
+        width: 120px;
+    }
+    .main-navbar .navbar-nav {
+        background: #998675;
+        text-align: center;
+        padding:20px 0;
+    }
+    .main-navbar.navbar-expand-lg .navbar-nav .nav-link {
+        padding-left: 0;
+    }
+    #banner .content h3 {
+        font-size: 30px;
+    }
+    #banner .content h1 {
+        font-size: 40px;
+    }
+    #banner {
+        height: 100vh;
+    }
+    .banner-text {
+        height: 100%;
+    }
+    #services-sec {
+        padding-top: 40px;
+        padding-bottom: 50px;
+    }
+    #projects-sec .nav-tabs .nav-link{
+        padding: 10px 8px;
+    }
+    #blog-sec .slick-center .card-title {
+        font-size: 16px;
+    }
+    #video-sec {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    #counter-sec .counter-item {
+        margin-bottom: 40px;
+    }
+    #counter-sec {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    #blog-sec .card-title {
+        line-height: 26px;
+    }
+    #copyright .copyright-left p {
+        line-height: 60px;
+        text-align: center;
+    }
+    #copyright .copyright-right p{
+        line-height: 60px;
+        text-align: center;
+    }
+    #footer {
+        padding-top: 40px;
+        padding-bottom: 30px;
+    }
+}
+@media(max-width:575.98px){
+    .main-navbar .navbar {
+        padding-top: 10px;
+    }
+    .main-navbar .navbar-toggler i {
+        color: #fff;
+    }
+    .main-navbar .navbar-toggler:focus {
+        box-shadow:none;
+    }
+    .main-navbar .navbar-brand img {
+        width: 120px;
+    }
+    .main-navbar .navbar-nav{
+        margin: 0 -15px !important;
+    }
+    .main-navbar .navbar-nav {
+        background: #998675;
+        text-align: center;
+        padding:20px 0;
+    }
+    .main-navbar.navbar-expand-lg .navbar-nav .nav-link {
+        padding-left: 0;
+    }
+    #banner .content h3 {
+        font-size: 23px;
+    }
+    #banner .content h1 {
+        font-size: 28px;
+        line-height: 34px;
+    }
+    #banner {
+        height: 80vh;
+    }
+    #banner .banner-text {
+        height: 80vh;
+    }
+    #banner .content{
+        margin-top: 65px;
+    }
+    #service-sec {
+        padding-top: 40px;
+        padding-bottom: 50px;
+    }
+    #projects-sec .nav-tabs .nav-link{
+        margin-bottom: 10px;
+    }
+    .sec-heading h2 {
+        font-size: 24px;
+    }
+    .sec-heading p {
+        padding: 0 0;
+    }
+    .main-navbar .nav-tabs .nav-link {
+        margin-bottom: 10px;
+    }
+    #video-sec {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    #video-sec .video-text h3 {
+        padding-top: 44px;
+        line-height: 40px;
+    }
+    #counter-sec .counter-item {
+        margin-bottom: 40px;
+    }
+    #counter-sec {
+        padding-bottom: 45px;
+    }
+    #blog-sec {
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+    #blog-sec .card-title {
+        line-height: 30px;
+    }
+    #footer {
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+    #copyright .copyright-left p {
+        line-height: 40px;
+    }
+    #copyright .copyright-right {
+        text-align: left !important;
+    }
+    #copyright .copyright-right p {
+        line-height: 40px;
+        text-align: center;
+    }
+}
+@media(min-width:500px) and (max-width:575px){
+    #services-sec .service-item p{
+        padding: 0 60px;
+        padding-top: 10px;
+        padding-bottom: 30px;
+    }
+    .main-navbar.navbar-expand-lg .navbar-nav .nav-link{
+        padding: 10px 10px;
+    }
+}
