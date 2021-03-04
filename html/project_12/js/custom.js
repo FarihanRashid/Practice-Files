@@ -13,24 +13,14 @@ $(function () {
     time: 2000
   });
 
-  $(window).scroll(function(){
-    var scrolling = $(this).scrollTop();
-    if(scrolling > 300){
-      $('.navbar').addClass('navbg');
-    }
-    else {
-      $('.navbar').removeClass('navbg');
-    }
-  });
-
   $(window).scroll(function () {
     var scrolling = $(this).scrollTop();
     if (scrolling > 300) {
-      $("#navbar-copy").slideDown(800);
+      $('.navbar').addClass('navbg');
       $('.back-to-top').fadeIn(500);
     }
     else {
-      $("#navbar-copy").fadeOut(300);
+      $('.navbar').removeClass('navbg');
       $('.back-to-top').fadeOut(500);
     }
   });
