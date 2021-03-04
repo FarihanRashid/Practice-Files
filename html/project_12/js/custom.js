@@ -69,14 +69,11 @@ $(function () {
 
   // preloader js
   $(window).on('load', function () {
-    $('.preloader-wrapper').delay(1).fadeOut(500);
+    $('.preloader-wrapper').delay(2000).fadeOut(800);
   });
 
-  // jQuery(function(){
-  //   jQuery(".player").YTPlayer();
-  // });
+  jQuery(function(){
+    jQuery(".player").YTPlayer();
+  });
 
-  var scrollSpy = new bootstrap.ScrollSpy(document.body, {
-    target: '#navbar'
-  })
 });

@@ -153,6 +153,11 @@ button:focus,input:focus,textarea:focus{
     left: 0;
     width: 100%;
     z-index: 99999;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
 }
 .main-navbar.navbg {
     position: fixed;
@@ -162,17 +167,13 @@ button:focus,input:focus,textarea:focus{
     background-color: #555555;
     padding-top: 15px;
     padding-bottom: 15px;
-    transition: all linear .3s;
-    -webkit-transition: all linear .3s;
-    -moz-transition: all linear .3s;
-    -ms-transition: all linear .3s;
-    -o-transition: all linear .3s;
-}
-.navbg {
-    background-color: #555555;
     animation: sticky 1s;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    transition: all ease-out .5s;
+    -webkit-transition: all ease-out .5s;
+    -moz-transition: all ease-out .5s;
+    -ms-transition: all ease-out .5s;
+    -o-transition: all ease-out .5s;
+    -webkit-animation: sticky 1s;
 }
 @keyframes sticky{
     from{
