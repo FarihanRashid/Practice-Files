@@ -1,0 +1,102 @@
+
+/* ============================ Banner css starts================================== */
+#banner{
+    height: 100vh;
+    background-color: var(--mainBlackColor);
+}
+/* #banner .banner-content{
+   
+} */
+#banner .banner-content h2 {
+    font-size: 36px;
+    color: #fff;
+    font-family: var(--fontFamilyRaleway);
+    font-weight: 400;
+    margin-bottom: 6px;
+}
+
+#banner .banner-content h3 {
+    font-size: 55px;
+    color: var(--mainYellowColor);
+    font-family: var(--fontFamilyRaleway);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 0;
+}
+
+#banner .banner-content p {
+    max-width: 600px;
+    margin: auto;
+    font-size: 14px;
+    line-height: 24px;
+    color: #f1f1f1;
+    font-family: var(--fontFamilyOpenSans);
+    padding-bottom: 20px;
+    font-weight: 400;
+}
+
+#banner .banner-content a {
+    font-family: var(--fontFamilyRaleway);
+    font-weight: 500;
+    font-size: 16px;
+    border: 1px solid #fff;
+    height: 50px;
+    width: 130px;
+    display: inline-block;
+    line-height: 50px;
+    text-transform: uppercase;
+    margin: 35px 4px 0 10px;
+    z-index: 2;
+    color: #fff;
+    transition: all linear .5s;
+    -moz-transition: all linear .5s;
+    -ms-transition: all linear .5s;
+    -o-transition: all linear .5s;
+}
+.banner-content a.active:hover {
+    background: none!important;
+    color: #fff;
+    border: 1px solid #fff;
+    transition: all linear .5s;
+    -webkit-transition: all linear .5s;
+    -moz-transition: all linear .5s;
+    -ms-transition: all linear .5s;
+    -o-transition: all linear .5s;
+}
+.banner-content a:hover,
+.banner-content a.active{
+    color: #000;
+    text-decoration: none;
+    background: #fec600;
+    transition: all linear .5s;
+    border-color: #fec600;
+    -moz-transition: all linear .5s;
+    -ms-transition: all linear .5s;
+    -o-transition: all linear .5s;
+}
+/* ============================ Banner css starts================================== */
+
+
+
+
+}
+#banner .carousel-control-prev,
+#banner .carousel-control-next{
+    top: 50%;
+    z-index: 9999;
+    height: fit-content;
+    width: fit-content;
+    opacity: 1;
+    padding: 10px;
+    background-color: #ffffff;
+    margin: 60px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+#banner .carousel-control-prev i,
+#banner .carousel-control-next i{
+    color: #1c1416 ;
+}
