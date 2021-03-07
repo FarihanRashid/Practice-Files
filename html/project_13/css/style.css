@@ -1,11 +1,10 @@
-/* variable css */
 :root{
     --fontFamilyRaleway:'Raleway', sans-serif;
     --fontFamilyOpenSans:'Open Sans', sans-serif;
     --mainBlackColor: #353535;
     --mainYellowColor: #fec600;
     --clipPathBottom:polygon(0 0, 100% 0, 100% 85%, 0% 100%);
-    --clipPathTopBottom:polygon(0 15%, 100% 0, 100% 85%, 0% 100%);
+    --clipPathTopBottom:polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
 }
 /* font css */
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,500,700|Open+Sans:400|Sacramento");
@@ -35,7 +34,51 @@ button:focus,input:focus,textarea:focus{
 }
 /* common css */
 
+/* back to top button css starts */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    text-transform: capitalize;
+    z-index: 999;
+    display: none;
+    background: #fec600;
+    color: #fff;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+}
+.back-to-top:hover {
+    background: #353535;
+    color: #fff;
+}
+/* back to top button css ends */
 
+/* section heading css starts */
+.sec-heading{
+    padding-bottom: 60px;
+}
+.sec-heading h1{
+    font-family: var(--fontFamilyRaleway);
+    font-size: 35px;
+    text-transform: capitalize;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 28px;
+}
+.sec-heading p{
+    font-family: var(--fontFamilyOpenSans);
+    font-size: 14px;
+}
+/* section heading css ends */
 
 /* ============================ Navbar css starts================================== */
 #navbar{
@@ -113,6 +156,7 @@ button:focus,input:focus,textarea:focus{
 #banner{
     height: 100vh;
     clip-path: var(--clipPathBottom);
+    position: relative;
 }
 @media(max-height:590px){
     #banner{
@@ -247,8 +291,255 @@ button:focus,input:focus,textarea:focus{
 /* ============================ Banner css starts================================== */
 
 /* ============================ About section css starts================================== */
+#about-sec {
+    padding-bottom: 50px;
+}
+#about-sec .card{
+    padding: 40px 10px;
+    border: none;
+    background-color: #eeeeee;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+#about-sec .card-body{
+    padding:0;
+}
+#about-sec .card-title{
+    font-family: var(--fontFamilyRaleway);
+    font-size: 18px;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 30px;
+}
+#about-sec .card-text{
+    font-family: var(--fontFamilyOpenSans);
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0;
+    margin-bottom: 30px;
+}
 
+#about-sec .about-content-main-card{
+    margin: 40px 15px;
+}
+#about-sec .about-content-img{
+    border: 1px solid var(--mainBlackColor);
+    padding: 25px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+#about-sec .about-content-img img{
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    width: 100%;
+}
+#about-sec .card-up,
+#about-sec .card-down,
+#about-sec .card-left,
+#about-sec .card-right{
+    position: relative;
+    z-index: 99;
+}
+#about-sec .card-up::before,
+#about-sec .card-down::before,
+#about-sec .card-left::before,
+#about-sec .card-right::before{
+    position: absolute;
+    content: '';
+    height: 40px;
+    width: 40px;
+    background: #eeeeee;
+    z-index: -9;
+}
+#about-sec .card-up::after,
+#about-sec .card-down::after,
+#about-sec .card-left::after,
+#about-sec .card-right::after{
+    position: absolute;
+    content: '';
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: var(--mainBlackColor);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+#about-sec .card-down::before{
+    bottom: -14px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    -webkit-transform: translateX(-50%) rotate(45deg);
+    -moz-transform: translateX(-50%) rotate(45deg);
+    -ms-transform: translateX(-50%) rotate(45deg);
+    -o-transform: translateX(-50%) rotate(45deg);
+}
+#about-sec .card-up::before{
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    -webkit-transform: translateX(-50%) rotate(45deg);
+    -moz-transform: translateX(-50%) rotate(45deg);
+    -ms-transform: translateX(-50%) rotate(45deg);
+    -o-transform: translateX(-50%) rotate(45deg);
+}
+#about-sec .card-right::before{
+    right: -14px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    -webkit-transform: translateY(-50%) rotate(45deg);
+    -moz-transform: translateY(-50%) rotate(45deg);
+    -ms-transform: translateY(-50%) rotate(45deg);
+    -o-transform: translateY(-50%) rotate(45deg);
+}
+#about-sec .card-left::before{
+    left: -14px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    -webkit-transform: translateY(-50%) rotate(45deg);
+    -moz-transform: translateY(-50%) rotate(45deg);
+    -ms-transform: translateY(-50%) rotate(45deg);
+    -o-transform: translateY(-50%) rotate(45deg);
+}
+#about-sec .card-down::after{
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    -webkit-transform: translateX(-50%) rotate(45deg);
+    -moz-transform: translateX(-50%) rotate(45deg);
+    -ms-transform: translateX(-50%) rotate(45deg);
+    -o-transform: translateX(-50%) rotate(45deg);
+}
+#about-sec .card-up::after{
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    -webkit-transform: translateX(-50%) rotate(45deg);
+    -moz-transform: translateX(-50%) rotate(45deg);
+    -ms-transform: translateX(-50%) rotate(45deg);
+    -o-transform: translateX(-50%) rotate(45deg);
+}
+#about-sec .card-right::after{
+    right: -50px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    -webkit-transform: translateY(-50%) rotate(45deg);
+    -moz-transform: translateY(-50%) rotate(45deg);
+    -ms-transform: translateY(-50%) rotate(45deg);
+    -o-transform: translateY(-50%) rotate(45deg);
+}
+#about-sec .card-left::after{
+    left: -50px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    -webkit-transform: translateY(-50%) rotate(45deg);
+    -moz-transform: translateY(-50%) rotate(45deg);
+    -ms-transform: translateY(-50%) rotate(45deg);
+    -o-transform: translateY(-50%) rotate(45deg);
+}
+#about-sec .card-down:hover{
+    box-shadow: 0px 2px 8px 3px #bdb3b3;
+}
+#about-sec .card-up:hover{
+    box-shadow: 0px -2px  8px 3px #bdb3b3;
+}
+#about-sec .card-right:hover{
+    box-shadow: 2px 2px  8px 2px #bdb3b3;
+}
+#about-sec .card-left:hover{
+    box-shadow: -2px 2px 8px 2px #bdb3b3;
+}
+#about-sec .card:hover::after{
+    background-color: var(--mainYellowColor);
+}
 /* ============================ About section css starts================================== */
+
+/* ============================ Portfolio Section css starts================================== */
+#portfolio-sec{
+    background-image: url(../images/port-banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    clip-path: var(--clipPathTopBottom);
+}
+#portfolio-sec > .overlay{
+    background-color: rgba(0, 0, 0, .7);
+}
+#portfolio-sec .sec-heading{
+    margin-top: 120px;
+    color: #ffffff;
+}
+#portfolio-sec .portfolio-content{
+    margin-bottom: 200px;
+    color: #ffffff;
+}
+#portfolio-sec .portfolio-item{
+    position: relative;
+    margin: 0 12px 30px 12px;
+}
+#portfolio-sec .portfolio-item img{
+    width: 100%;
+}
+#portfolio-sec .portfolio-item:last-child{
+    margin-bottom: 0;
+}
+#portfolio-sec .portfolio-item .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: rgba(0, 0, 0, .5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+#portfolio-sec .portfolio-item .overlay a{
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+#portfolio-sec .portfolio-item .overlay a:hover{
+    background-color: var(--mainYellowColor);
+}
+#portfolio-sec .portfolio-item .overlay a i{
+    color: #000;
+}
+#portfolio-sec .portfolio-item:hover .overlay{
+    height: 100%;
+    opacity: 1;
+    visibility: visible;
+}
+/* ============================ Portfolio Section css starts================================== */
 
 /* ============================ Navbar css starts================================== */
 /* ============================ Navbar css starts================================== */

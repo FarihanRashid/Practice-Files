@@ -5,6 +5,17 @@ $(function () {
     });
 
     //Scroll function for navbar and backToTop Btn
+    $(function(){
+        var scrolling = $(this).scrollTop();
+        if (scrolling > 0) {
+            $('#navbar').addClass('navbar-bg');
+            $('.back-to-top').fadeIn(500);
+        }
+        else {
+            $('#navbar').removeClass('navbar-bg');
+            $('.back-to-top').fadeOut(500);
+        };
+    });
     $(window).scroll(function () {
         var scrolling = $(this).scrollTop();
         if (scrolling > 0) {
@@ -33,19 +44,36 @@ $(function () {
         cssEase: 'linear'
     });
 
-    //animation scroll js
-    var html_body = $('html, body');
-    $('.navbar a').on('click', function () {
-        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-            if (target.length) {
-                html_body.animate({
-                    scrollTop: target.offset().top - 90
-                }, 1500);
-                return false;
-            }
-        }
+    // //animation scroll js
+    // var html_body = $('html, body');
+    // $('.navbar a').on('click', function () {
+    //     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+    //         var target = $(this.hash);
+    //         target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+    //         if (target.length) {
+    //             html_body.animate({
+    //                 scrollTop: target.offset().top - 90
+    //             }, 1500);
+    //             return false;
+    //         }
+    //     }
+    // });
+
+    //portfolio lightbox
+    $('.venobox').venobox({
+        border: '5px',
+    });
+    
+      // portfolio slick
+
+      $('.portfolio-content').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        arrows: false,
+        dots: false,
+        autoplaySpeed: 2000,
+        centerPadding:false,
     });
 
 });
