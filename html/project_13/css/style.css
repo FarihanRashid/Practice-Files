@@ -173,8 +173,8 @@ button:focus,input:focus,textarea:focus{
 #banner .carousel-control-next{
     top: 50%;
     z-index: 9999;
-    height: fit-content;
-    width: fit-content;
+    height: min-content;
+    width: min-content;
     opacity: 1;
     padding: 10px;
     background-color: #ffffff;
