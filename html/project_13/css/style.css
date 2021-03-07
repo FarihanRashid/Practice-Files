@@ -546,6 +546,9 @@ button:focus,input:focus,textarea:focus{
 #services-sec{
     padding-bottom: 20px;
 }
+#services-sec .services-content{
+    padding-bottom: -10px;
+}
 #services-sec .wrapper{
     position: relative;
     overflow: hidden;
@@ -627,6 +630,15 @@ button:focus,input:focus,textarea:focus{
     -ms-border-radius:50% ;
     -o-border-radius:50% ;
     margin: 0 auto;
+    transition: all linear .5s;
+    -webkit-transition: all linear .5s;
+    -moz-transition: all linear .5s;
+    -ms-transition: all linear .5s;
+    -o-transition: all linear .5s;
+}
+#services-sec .slick-center .service-img img{
+    width: 55%;
+    background-color: var(--mainYellowColor);
 }
 #services-sec .service-description p{
     font-family: 'Open Sans', sans-serif;
@@ -645,6 +657,7 @@ button:focus,input:focus,textarea:focus{
     -ms-transition: all linear .3s;
     -o-transition: all linear .3s;
 }
+#services-sec .service-description::before,
 #services-sec .service-description::after{
     content: '';
     position: absolute;
@@ -652,18 +665,40 @@ button:focus,input:focus,textarea:focus{
     height: 40px;
     width: 40px;
     top: 50%;
-    transform: translateY(-50%) rotate(45deg);
     background: #eeeeee;
+    transform: translateY(-50%) rotate(45deg);
     -webkit-transform: translateY(-50%) rotate(45deg);
     -moz-transform: translateY(-50%) rotate(45deg);
     -ms-transform: translateY(-50%) rotate(45deg);
     -o-transform: translateY(-50%) rotate(45deg);
+    transition: all linear .5s;
+    -webkit-transition: all linear .5s;
+    -moz-transition: all linear .5s;
+    -ms-transition: all linear .5s;
+    -o-transition: all linear .5s;
 }
+#services-sec .service-description::before{
+    z-index: 9;
+}
+#services-sec .service-description.desc-left::before,
 #services-sec .service-description.desc-left::after{
     left: -15px;
 }
+#services-sec .service-description.desc-right::before,
 #services-sec .service-description.desc-right::after{
     right: -15px;
+}
+#services-sec .slick-center .service-description.desc-left::after{
+    box-shadow: -2px 2px 8px 2px #bdb3b3;
+}
+#services-sec .slick-center .service-description.desc-right::after{
+    box-shadow: 2px 2px  8px 2px #bdb3b3;
+}
+#services-sec .slick-center .service-description.desc-left{
+    box-shadow: -2px 2px 8px 2px #bdb3b3;
+}
+#services-sec .slick-center .service-description.desc-right{
+    box-shadow: 2px 2px  8px 2px #bdb3b3;
 }
 /* ============================ services css ends================================== */
 
