@@ -1,3 +1,6 @@
+/* font css */
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,500,700|Open+Sans:400|Sacramento");
+
 :root{
     --fontFamilyRaleway:'Raleway', sans-serif;
     --fontFamilyOpenSans:'Open Sans', sans-serif;
@@ -6,8 +9,6 @@
     --clipPathBottom:polygon(0 0, 100% 0, 100% 85%, 0% 100%);
     --clipPathTopBottom:polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
 }
-/* font css */
-@import url("https://fonts.googleapis.com/css?family=Raleway:400,500,700|Open+Sans:400|Sacramento");
 
 *,::after,::before{
     margin: 0;
@@ -66,7 +67,7 @@ button:focus,input:focus,textarea:focus{
 .sec-heading{
     padding-bottom: 60px;
 }
-.sec-heading h1{
+.sec-heading h2{
     font-family: var(--fontFamilyRaleway);
     font-size: 35px;
     text-transform: capitalize;
@@ -93,6 +94,7 @@ button:focus,input:focus,textarea:focus{
 #navbar .nav-link{
     font-family: var(--fontFamilyRaleway);
     font-size: 16px;
+    font-weight: 500;
     text-transform: capitalize;
     color:#ffffff;
     padding: 42px 0;
@@ -221,21 +223,21 @@ button:focus,input:focus,textarea:focus{
     top: 0;
     left: 0;
 }
-#banner .banner-text h2 {
+#banner .banner-text h1 {
     font-size: 36px;
     color: #fff;
     font-family: var(--fontFamilyRaleway);
     font-weight: 400;
-    margin-bottom: 6px;
 }
 
-#banner .banner-text h3 {
+#banner .banner-text h1 span {
     font-size: 55px;
     color: var(--mainYellowColor);
     font-family: var(--fontFamilyRaleway);
     font-weight: 700;
     text-transform: uppercase;
-    margin-top: 0;
+    margin-top: 6px;
+    display: block;
 }
 
 #banner .banner-text p {
@@ -280,9 +282,9 @@ button:focus,input:focus,textarea:focus{
 .banner-text a.active{
     color: #000;
     text-decoration: none;
-    background: #fec600;
+    background: var(--mainYellowColor);
     transition: all linear .5s;
-    border-color: #fec600;
+    border-color: var(--mainYellowColor);
     -moz-transition: all linear .5s;
     -ms-transition: all linear .5s;
     -o-transition: all linear .5s;
@@ -540,5 +542,130 @@ button:focus,input:focus,textarea:focus{
 }
 /* ============================ Portfolio Section css starts================================== */
 
+/* ============================ services css starts================================== */
+#services-sec{
+    padding-bottom: 20px;
+}
+#services-sec .wrapper{
+    position: relative;
+    overflow: hidden;
+    padding: 80px 0;
+}
+#services-sec .border-design{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) scaleY(3);
+    -webkit-transform: translateX(-50%) scaleY(3);
+    -moz-transform: translateX(-50%) scaleY(3);
+    -ms-transform: translateX(-50%) scaleY(3);
+    -o-transform: translateX(-50%) scaleY(3);
+    z-index: -9;
+    width: 1px;
+    height: 100%;
+    overflow: hidden;
+    border: 1px dashed #000000;
+}
+#services-sec .slider-btn{
+    position: absolute;
+    left: 50%;
+    width: 42px;
+    height: 42px;
+    z-index: 9;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 2px solid #000;
+    background-color: #ffffff;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+    cursor: pointer;
+}
+#services-sec .slider-btn i{
+    font-size: 20px;
+}
+#services-sec .slider-btn-up{
+    top: 0;
+}
+#services-sec .slider-btn-down{
+    bottom: 0;
+}
+#services-sec .slider-btn:hover{
+    background-color: var(--mainYellowColor);
+}
+#services-sec .service-title h3{
+    font-family: var(--fontFamilyRaleway);
+    font-size: 20px;
+    color: #111111;
+    text-transform: uppercase;
+
+}
+#services-sec .service-img{
+    border-radius:50% ;
+    -webkit-border-radius:50% ;
+    -moz-border-radius:50% ;
+    -ms-border-radius:50% ;
+    -o-border-radius:50% ;
+}
+#services-sec .service-img img{
+    padding: 10px;
+    background-color: #F1F1F1;
+    width: 45%;
+    border-radius:50% ;
+    -webkit-border-radius:50% ;
+    -moz-border-radius:50% ;
+    -ms-border-radius:50% ;
+    -o-border-radius:50% ;
+    margin: 0 auto;
+}
+#services-sec .service-description p{
+    font-family: 'Open Sans', sans-serif;
+    color: #444444;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 54px 40px;
+    line-height: 24px;
+}
+#services-sec .service-description{
+    background: #eeeeee;
+    position: relative;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+#services-sec .service-description::after{
+    content: '';
+    position: absolute;
+    z-index: -9;
+    height: 40px;
+    width: 40px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    background: #eeeeee;
+    -webkit-transform: translateY(-50%) rotate(45deg);
+    -moz-transform: translateY(-50%) rotate(45deg);
+    -ms-transform: translateY(-50%) rotate(45deg);
+    -o-transform: translateY(-50%) rotate(45deg);
+}
+#services-sec .service-description.desc-left::after{
+    left: -15px;
+}
+#services-sec .service-description.desc-right::after{
+    right: -15px;
+}
+/* ============================ services css ends================================== */
+
 /* ============================ Navbar css starts================================== */
-/* ============================ Navbar css starts================================== */
+/* ============================ Navbar css ends================================== */

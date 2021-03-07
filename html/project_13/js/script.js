@@ -5,7 +5,7 @@ $(function () {
     });
 
     //Scroll function for navbar and backToTop Btn
-    $(function(){
+    $(function () {
         var scrolling = $(this).scrollTop();
         if (scrolling > 0) {
             $('#navbar').addClass('navbar-bg');
@@ -45,35 +45,52 @@ $(function () {
     });
 
     // //animation scroll js
-    // var html_body = $('html, body');
-    // $('.navbar a').on('click', function () {
-    //     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-    //         var target = $(this.hash);
-    //         target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-    //         if (target.length) {
-    //             html_body.animate({
-    //                 scrollTop: target.offset().top - 90
-    //             }, 1500);
-    //             return false;
-    //         }
-    //     }
-    // });
+    var html_body = $('html, body');
+    $('.navbar a').on('click', function () {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                html_body.animate({
+                    scrollTop: target.offset().top - 90
+                }, 1500);
+                return false;
+            }
+        }
+    });
 
     //portfolio lightbox
     $('.venobox').venobox({
         border: '5px',
     });
-    
-      // portfolio slick
 
-      $('.portfolio-content').slick({
+    // portfolio slick
+    $('.portfolio-content').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
         arrows: false,
         dots: false,
         autoplaySpeed: 2000,
-        centerPadding:false,
+        centerPadding: false,
     });
 
+
+    // service slick part 
+
+    $('#services-sec .services-content').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: true,
+        prevArrow: '#services-sec .slider-btn-up',
+        nextArrow: '#services-sec .slider-btn-down',
+        vertical: true,
+        verticalSwiping: true,
+        autoplay: false,
+        centerMode: true,
+        centerPadding: '0px',
+        focusOnSelect: true,
+        speed: 1000,
+    });
 });
