@@ -14,7 +14,7 @@ $(function () {
         else {
             $('#navbar').removeClass('navbar-bg');
             $('.back-to-top').fadeOut(500);
-        };
+        }
     });
     $(window).scroll(function () {
         var scrolling = $(this).scrollTop();
@@ -25,7 +25,7 @@ $(function () {
         else {
             $('#navbar').removeClass('navbar-bg');
             $('.back-to-top').fadeOut(500);
-        };
+        }
     });
 
     //Banner Slider js
@@ -53,7 +53,7 @@ $(function () {
             if (target.length) {
                 html_body.animate({
                     scrollTop: target.offset().top - 84
-                }, 1500);
+                }, 1000);
                 return false;
             }
         }
@@ -76,8 +76,7 @@ $(function () {
     });
 
 
-    // service slick part 
-
+    // service slick js 
     $('#services-sec .services-content').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
@@ -93,4 +92,43 @@ $(function () {
         focusOnSelect: true,
         speed: 1000,
     });
+
+    // testimonial slick js
+    $('#testimonial-sec .testimonial-img-wrapper').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: false,
+        arrows: true,
+        dots: false,
+        vertical: true,
+        verticalSwiping: true,
+        centerMode: true,
+        centerPadding: false,
+        asNavFor: '#testimonial-sec .testimonial-details',
+        prevArrow: '#testimonial-sec .slider-btn-up',
+        nextArrow: '#testimonial-sec .slider-btn-down',
+    });
+    $('#testimonial-sec .testimonial-details').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 1000,
+        arrows: false,
+        dots: false,
+        fade: true,
+        asNavFor: '#testimonial-sec .testimonial-img-wrapper',
+    });
+
+    // bootstrap scroll spy
+    var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+        target: '#navbar',
+        offset: 86,
+    });
+    var dataSpyList = [].slice.call(document.querySelectorAll('[data-bs-spy="scroll"]'))
+    dataSpyList.forEach(function (dataSpyEl) {
+        bootstrap.ScrollSpy.getInstance(dataSpyEl)
+            .refresh()
+    })
+
+
 });
