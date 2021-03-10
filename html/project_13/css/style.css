@@ -7,6 +7,7 @@
     --mainBlackColor: #353535;
     --mainYellowColor: #fec600;
     --clipPathBottom:polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+    --clipPathTop:polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
     --clipPathTopBottom:polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
 }
 
@@ -79,6 +80,7 @@ button:focus,input:focus,textarea:focus{
 .sec-heading p{
     font-family: var(--fontFamilyOpenSans);
     font-size: 14px;
+    padding: 0 30px;
 }
 /* section heading css ends */
 
@@ -103,7 +105,7 @@ button:focus,input:focus,textarea:focus{
     position: relative;
 }
 #navbar .nav-item:last-child .nav-link{
-    margin-left: 0 !important;
+    margin-right: 0 !important;
 }
 #navbar .nav-link:hover,
 #navbar .nav-link.active{
@@ -154,7 +156,7 @@ button:focus,input:focus,textarea:focus{
 }
 #navbar.navbar-bg .nav-link{
     padding: 25px 0;
-    margin: 0 18px;
+    margin: 0 15px;
 }
 /* ============================ Navbar css ends================================== */
 
@@ -265,7 +267,6 @@ button:focus,input:focus,textarea:focus{
     border: 1px solid #fff;
     height: 50px;
     width: 130px;
-    display: inline-block;
     line-height: 50px;
     text-transform: uppercase;
     margin: 35px 4px 0 10px;
@@ -274,28 +275,24 @@ button:focus,input:focus,textarea:focus{
     -moz-transition: all linear .5s;
     -ms-transition: all linear .5s;
     -o-transition: all linear .5s;
-}
-.banner-text a.active:hover {
-    background: none!important;
-    color: #fff;
-    border: 1px solid #fff;
-    transition: all linear .5s;
     -webkit-transition: all linear .5s;
-    -moz-transition: all linear .5s;
-    -ms-transition: all linear .5s;
-    -o-transition: all linear .5s;
 }
-.banner-text a:hover,
-.banner-text a.active{
+#banner .banner-text a:hover{
+    border-color: transparent;
+    background-color: var(--mainYellowColor);
     color: #000;
-    text-decoration: none;
-    background: var(--mainYellowColor);
-    transition: all linear .5s;
-    border-color: var(--mainYellowColor);
-    -moz-transition: all linear .5s;
-    -ms-transition: all linear .5s;
-    -o-transition: all linear .5s;
 }
+#banner .banner-text a.active{
+    border-color: transparent;
+    background-color: var(--mainYellowColor);
+    color: #000;
+}
+#banner .banner-text a.active:hover{
+    border-color: #fff;
+    background-color:transparent;
+    color: #ffffff;
+}
+
 /* ============================ Banner css starts================================== */
 
 /* ============================ About section css starts================================== */
@@ -874,9 +871,120 @@ button:focus,input:focus,textarea:focus{
 }
 /* ============================ testimonials css ends================================== */
 
+/* ============================ Pricing css starts================================== */
+
+#pricing-sec .pricing-item {
+    background-color: var(--mainBlackColor);
+    position: relative;
+    overflow: hidden;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+#pricing-sec .price-head h3 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+    padding-top: 30px;
+    padding-bottom: 55px;
+    margin: 0;
+}
+#pricing-sec .price-details {
+    padding-top: 90px;
+    padding-bottom: 50px;
+    position: relative;
+    z-index: 9;
+}
+#pricing-sec .price-details::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 101%;
+    height: 100%;
+    clip-path: var(--clipPathTopBottom);
+    background-color: #F1F1F1;
+    z-index: -9;
+}
+#pricing-sec .price-details p {
+    font-family: var(--fontFamilyOpenSans);
+    font-size: 14px;
+    line-height: 30px;
+    color: var(--mainBlackColor);
+}
+#pricing-sec .join h4 {
+    padding-bottom: 22px;
+}
+#pricing-sec .join a {
+    font-family: var(--fontFamilyRaleway);
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+}
+#pricing-sec .price-circle {
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    z-index: 99;
+    width: 100px;
+    height: 100px;
+    border: 1px solid var(--mainBlackColor);
+    border-radius: 50%;
+    background: #fff;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+#pricing-sec .price-rate {
+    width: 90px;
+    height: 90px;
+    background:var(--mainBlackColor);
+    border-radius: 50%;
+    margin-top: 4px;
+    margin-left: 4px;
+}
+#pricing-sec .price-rate p {
+    font-family:var(--fontFamilyRaleway);
+    font-size: 28px;
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 10px;
+}
+#pricing-sec .price-rate .rate-p {
+    font-size: 14px;
+    padding-top: 0;
+}
+#pricing-sec .pricing-item *{
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+#pricing-sec .pricing-item:hover,
+#pricing-sec .pricing-item:hover .price-rate {
+    background:var(--mainYellowColor);
+    color: #353535;
+}
+#pricing-sec .pricing-item:hover .price-head h3,
+#pricing-sec .pricing-item:hover .join a,
+#pricing-sec .pricing-item:hover .price-rate p {
+    color: #353535;
+}
+#pricing-sec .pricing-item:hover {
+    box-shadow: 0px 0px 10px 0px #bdb3b3;
+}
+/* ============================ Pricing css ends================================== */
+
 /* ============================ Navbar css starts================================== */
 /* ============================ Navbar css ends================================== */
-
 
 
 
