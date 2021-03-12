@@ -182,17 +182,16 @@ button:focus,input:focus,textarea:focus{
 #banner .carousel-control-next{
     top: 50%;
     z-index: 9999;
-    height:42px;
-    width:42px;
+    height:40px;
+    width:40px;
     opacity: 1;
     background-color: #ffffff;
-    margin: 60px;
+    margin: 40px;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
-    border:2px solid var(--mainBlackColor);
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
@@ -211,7 +210,7 @@ button:focus,input:focus,textarea:focus{
 #banner .carousel-control-prev i,
 #banner .carousel-control-next i{
     color: #1c1416 ;
-    font-size: 18px;
+    font-size: 20px;
 }
 #banner #banner-slick-slider,
 #banner .slick-list,
@@ -296,11 +295,9 @@ button:focus,input:focus,textarea:focus{
 /* ============================ Banner css starts================================== */
 
 /* ============================ About section css starts================================== */
-#about-sec {
-    padding-bottom: 50px;
-}
+
 #about-sec .card{
-    padding: 40px 10px;
+    padding: 40px 25px;
     border: none;
     background-color: #eeeeee;
     transition: all linear .3s;
@@ -324,7 +321,6 @@ button:focus,input:focus,textarea:focus{
     font-size: 14px;
     line-height: 24px;
     margin: 0;
-    margin-bottom: 30px;
 }
 
 #about-sec .about-content-main-card{
@@ -484,7 +480,7 @@ button:focus,input:focus,textarea:focus{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    clip-path: var(--clipPathTopBottom);
+    clip-path: polygon(0 7%, 100% 0, 100% 94%, 0% 100%);;
 }
 #portfolio-sec > .overlay{
     background-color: rgba(0, 0, 0, .7);
@@ -773,6 +769,7 @@ button:focus,input:focus,textarea:focus{
 }
 #testimonial-sec .testimonial-img-item img{
     width: 100%;
+    margin-top: 10px;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -788,7 +785,8 @@ button:focus,input:focus,textarea:focus{
     -o-transition: all linear .3s;
 }
 #testimonial-sec .testimonial-img-item .img{
-    width: 72px;
+    width: 74px;
+    height: 74px;
     margin: 30px auto;
     transition: all linear .3s;
     border-radius: 50%;
@@ -797,13 +795,14 @@ button:focus,input:focus,textarea:focus{
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
     background-color: #ebebeb;
+    overflow: hidden;
 }
 #testimonial-sec .testimonial-img-item.slick-center .img{
-    transform: scale(1.3);
-    -webkit-transform: scale(1.3);
-    -moz-transform: scale(1.3);
-    -ms-transform: scale(1.3);
-    -o-transform: scale(1.3);
+    transform: scale(1.35);
+    -webkit-transform: scale(1.35);
+    -moz-transform: scale(1.35);
+    -ms-transform: scale(1.35);
+    -o-transform: scale(1.35);
     background-color: var(--mainYellowColor);
 }
 #testimonial-sec .testimonial-img-item.slick-center img{
@@ -872,7 +871,9 @@ button:focus,input:focus,textarea:focus{
 /* ============================ testimonials css ends================================== */
 
 /* ============================ Pricing css starts================================== */
-
+#pricing-sec{
+    padding-bottom: 40px;
+}
 #pricing-sec .pricing-item {
     background-color: var(--mainBlackColor);
     position: relative;
@@ -983,9 +984,355 @@ button:focus,input:focus,textarea:focus{
 }
 /* ============================ Pricing css ends================================== */
 
-/* ============================ Navbar css starts================================== */
-/* ============================ Navbar css ends================================== */
+/* ============================ counter css starts================================== */
+#counter-sec{
+    background-image: url(../images/port-banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    clip-path:polygon(0 22%, 100% 0, 100% 78%, 0% 100%) ;
+}
+#counter-sec .overlay{
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height: 100%;
+    padding: 80px 0;
+}
+#counter-sec .counter-content{
+    transform: rotate(357deg);
+    -moz-transform: rotate(357deg);
+    -webkit-transform: rotate(357deg);
+    -o-transform: rotate(357deg);
+    -ms-transform: rotate(357deg);
+}
+#counter-sec .counter-item{
+    font-family: var(--fontFamilyRaleway);
+    padding: 25px 0px;
+    color: #ffffff;
+    position: relative;
+}
+#counter-sec .counter-item::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 120%;
+    height: 100%;
+    border: 1px solid #ffffff;
+    transform: skew(-10deg, 0deg);
+    -moz-transform: skew(-10deg, 0deg);
+    -webkit-transform: skew(-10deg, 0deg);
+    -o-transform: skew(-10deg, 0deg);
+    -ms-transform: skew(-10deg, 0deg);
+    z-index: -9;
+}
+#counter-sec .counter-item span{
+    font-size: 30px;
+    margin-bottom: 18px;
+    display:block;
+}
+#counter-sec .counter-item h6{
+    font-size: 20px;
+    text-transform: capitalize;
+}
+/* ============================ counter css ends================================== */
 
+/* ============================ Teams css starts================================== */
+#teams-sec {
+    padding-bottom: 30px;
+}
+#teams-sec .card{
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+#teams-sec .card-img-top{
+    background-color: #f1f1f1;
+    width: 100%;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+    padding-top: 15px;
+    position: relative;
+}
+#teams-sec .card-img-top img{
+    width: 70%;
+    margin: 0 auto;
+}
+#teams-sec .card-img-top .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba(254, 198, 0, .6);
+    transition: all ease .5s;
+    -webkit-transition: all ease .5s;
+    -moz-transition: all ease .5s;
+    -ms-transition: all ease .5s;
+    -o-transition: all ease .5s;
+}
+#teams-sec .card-img-top .overlay i{
+    font-size: 18px;
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #000;
+}
+#teams-sec .card:hover .card-img-top .overlay{
+    height: 100%;
+    opacity: 1;
+    visibility: visible;
+}
+#teams-sec .card-body{
+    padding: 0;
+}
+#teams-sec .card-title{
+    font-family: var(--fontFamilyRaleway);
+    font-size: 20px;
+    font-weight: 500;
+    color: #111111;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#teams-sec .card-text{
+    font-family: var(--fontFamilyRaleway);
+    font-size: 16px;
+    font-weight: 400;
+    color: #444444;
+    padding-bottom: 10px;
+}
+#teams-sec .social-links{
+    position: relative;
+    margin-top: -35px;
+    z-index: -9;
+    opacity: 0;
+    visibility: hidden;
+    transition: all ease .5s;
+    -webkit-transition: all ease .5s;
+    -moz-transition: all ease .5s;
+    -ms-transition: all ease .5s;
+    -o-transition: all ease .5s;
+    padding-bottom: 22px;
+}
+#teams-sec .social-links a{
+    width: 35px;
+    height: 35px;
+    border: 1px solid #111111;
+    margin: 0 10px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#teams-sec .social-links i{
+    font-size: 16px;
+    color: #111111;
+    line-height: 30px;
+    text-align: center;
+}
+#teams-sec .social-links a:hover{
+    background: #fec600;
+    border: none;
+}
+#teams-sec .card:hover .social-links{
+    margin-top: 0;
+    z-index: 9;
+    opacity: 1;
+    visibility: visible;
+}
+/* ============================ Teams css ends================================== */
 
+/* ============================ Market place css starts================================== */
+#market-place-sec{
+    background-color: #f1f1f1;
+    clip-path:polygon(0 28%, 100% 0, 100% 72%, 0% 100%) ;
+    padding: 70px 0;
+}
+#market-place-sec .market-place-content{
+    transform: rotate(357deg);
+    -moz-transform: rotate(357deg);
+    -webkit-transform: rotate(357deg);
+    -o-transform: rotate(357deg);
+    -ms-transform: rotate(357deg);
+}
+#market-place-sec .market-place-item {
+    padding: 40px 0px;
+    margin: 0 40px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#market-place-sec .market-place-item .img img{
+    width: 100%;
+}
+#market-place-sec .market-place-item::before{
+    content:'';
+    position: absolute;
+    top: 50%;
+    left: -22px;
+    width: 130%;
+    height: 90%;
+    border: 1px solid #cccccc;
+    transform: translateY(-50%) skew(-10deg, 0deg);
+    -moz-transform: translate(-50%) skew(-10deg, 0deg);
+    -webkit-transform: translateY(-50%) skew(-10deg, 0deg);
+    -o-transform: translateY(-50%) skew(-10deg, 0deg);
+    -ms-transform: translateY(-50%) skew(-10deg, 0deg);
+    z-index: 9;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+#market-place-sec .slick-center .market-place-item::before{
+    border-color: var(--mainYellowColor);
+}
+/* ============================ Market place css ends================================== */
 
+/* ============================ footer css starts================================== */
+#footer{
+    background-color: #222222;
+}
+#footer .footer-heading{
+    padding-bottom: 100px;
+    position: relative;
+}
+#footer .footer-heading::before{
+    content:'';
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    z-index: -9;
+    background-color: #222222;
+}
+#footer .footer-heading::after{
+    content:'';
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    z-index: 9;
+    background-color: #555555;
+    transform: rotate(357deg);
+    -moz-transform: rotate(357deg);
+    -webkit-transform: rotate(357deg);
+    -o-transform: rotate(357deg);
+    -ms-transform: rotate(357deg);
+}
+#footer .footer-item{
+    text-align: center;
+}
+#footer .footer-item{
+    border-right: 1px solid #555555;
+}
+#footer .footer-item-last{
+    border: none;
+}
+#footer .footer-item i{
+    font-size: 18px;
+    width: 35px;
+    height: 35px;
+    background: #fec600;
+    line-height: 35px;
+    color: #353535;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+#footer .footer-item p,
+#footer .footer-item a{
+    font-family: var(--fontFamilyRaleway);
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+    padding: 0 8px;
+    margin-bottom: 0;
+    color: #ffffff;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+#footer .footer-item p:hover,
+#footer .footer-item a:hover{
+    color: var(--mainYellowColor);
+}
+#footer .footer-item p{
+}
+#footer .footer-item a{
+    display: block;
+}
+#footer .social-media{
+}
+#footer .social-media-heading h3{
+    font-family: var(--fontFamilyRaleway);
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #fff;
+    margin-top: 60px;
+}
+#footer .social-links i{
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    line-height: 40px;
+    color: #353535;
+    font-size: 18px;
+    margin: 20px 6px;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+#footer .social-links i:hover{
+    background-color: var(--mainYellowColor);
+}
+/* ============================ footer css ends================================== */
+
+/* ============================ copyright css starts================================== */
+#copyright{
+    background-color: #353535;
+    padding: 20px 0;
+}
+#copyright h6{
+    font-family:var(--fontFamilyRaleway);
+    font-size: 14px;
+    color: #fff;
+    margin: 0;
+}
+#copyright a{
+    color: var(--mainYellowColor);
+}
+/* ============================ copyright css ends================================== */
 
