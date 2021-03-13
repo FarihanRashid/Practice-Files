@@ -4,6 +4,23 @@ $(function () {
         $('html, body').animate({ scrollTop: 0 }, 1000);
     });
 
+    // bootstrap scroll spy
+
+    // $(function () {
+    //     var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+    //         target: '#navbar',
+    //         offset: 75,
+    //     });
+    // });
+
+    // scrollspy js
+    scrollSpy('.navbar-nav', {
+        sectionSelector: 'div',
+        targetSelector: 'a',
+        offset: 78,
+    });
+
+
     //Scroll function for navbar and backToTop Btn
     $(function () {
         var scrolling = $(this).scrollTop();
@@ -52,7 +69,7 @@ $(function () {
             target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
             if (target.length) {
                 html_body.animate({
-                    scrollTop: target.offset().top - 84
+                    scrollTop: target.offset().top - 78
                 }, 2000);
                 return false;
             }
@@ -73,6 +90,20 @@ $(function () {
         dots: false,
         autoplaySpeed: 2000,
         centerPadding: false,
+        responsive: [
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+        ]
     });
 
 
@@ -91,8 +122,17 @@ $(function () {
         centerPadding: false,
         focusOnSelect: true,
         speed: 1000,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    centerMode: false,
+                }
+            },
+        ]
     });
-    
+
     // testimonial slick js
     $('#testimonial-sec .testimonial-img-wrapper').slick({
         slidesToShow: 3,
@@ -107,6 +147,15 @@ $(function () {
         asNavFor: '#testimonial-sec .testimonial-details',
         prevArrow: '#testimonial-sec .slider-btn-up',
         nextArrow: '#testimonial-sec .slider-btn-down',
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    vertical: false,
+                    verticalSwiping: false,
+                }
+            },
+        ]
     });
     $('#testimonial-sec .testimonial-details').slick({
         slidesToShow: 1,
@@ -118,24 +167,45 @@ $(function () {
         fade: true,
         asNavFor: '#testimonial-sec .testimonial-img-wrapper',
     });
-    
-    // bootstrap scroll spy
-    var scrollSpy = new bootstrap.ScrollSpy(document.body, {
-        target: '#navbar',
-        offset: 86,
-    });
-    var dataSpyList = [].slice.call(document.querySelectorAll('[data-bs-spy="scroll"]'))
-    dataSpyList.forEach(function (dataSpyEl) {
-        bootstrap.ScrollSpy.getInstance(dataSpyEl)
-            .refresh()
-        })
+
 
     // counter js
     $('.counter').counterUp({
         delay: 10,
         time: 2000,
     });
-    
+
+    // teams section slick js 
+    $('#teams-sec .teams-content').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: false,
+        autoplay: false,
+        autoplaySpeed: 2000,
+        centerPadding: false,
+        responsive: [
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 1,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+        ]
+    });
+
     // market place slick js 
     $('#market-place-sec .market-place-content').slick({
         slidesToShow: 5,
@@ -146,6 +216,28 @@ $(function () {
         autoplaySpeed: 2000,
         centerMode: true,
         centerPadding: false,
+        responsive: [
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 2,
+                    centerMode: false,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 4,
+                    centerMode: false,
+                }
+            },
+        ]
     });
-    
+
 });
