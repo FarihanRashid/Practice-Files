@@ -90,6 +90,13 @@ button:focus,input:focus,textarea:focus{
 /* section heading css ends */
 
 /* ============================ Navbar css starts================================== */
+.navbar-collapse{
+    transition: all ease-in-out .5s !important;
+    -webkit-transition: all ease-in-out .5s !important;
+    -moz-transition: all ease-in-out .5s !important;
+    -ms-transition: all ease-in-out .5s !important;
+    -o-transition: all ease-in-out .5s !important;
+}
 #navbar{
     border-bottom: 1px solid #423919;
     padding: 0;
@@ -684,8 +691,7 @@ button:focus,input:focus,textarea:focus{
     -ms-transition: all linear .3s;
     -o-transition: all linear .3s;
 }
-#services-sec .service-description::before,
-#services-sec .service-description::after{
+#services-sec .service-description::before{
     content: '';
     position: absolute;
     z-index: -9;
@@ -704,28 +710,19 @@ button:focus,input:focus,textarea:focus{
     -ms-transition: all linear .5s;
     -o-transition: all linear .5s;
 }
-#services-sec .service-description::before{
-    z-index: 9;
-}
-#services-sec .service-description.desc-left::before,
-#services-sec .service-description.desc-left::after{
+#services-sec .service-description.desc-left::before{
     left: -15px;
 }
-#services-sec .service-description.desc-right::before,
-#services-sec .service-description.desc-right::after{
+#services-sec .service-description.desc-right::before{
     right: -15px;
 }
-#services-sec .slick-center .service-description.desc-left::after{
-    box-shadow: -2px 2px 8px 2px #bdb3b3;
-}
-#services-sec .slick-center .service-description.desc-right::after{
-    box-shadow: 2px 2px  8px 2px #bdb3b3;
-}
 #services-sec .slick-center .service-description.desc-left{
-    box-shadow: -2px 2px 8px 2px #bdb3b3;
+    filter: drop-shadow(-2px 2px 6px #bdb3b3);
+    -webkit-filter: drop-shadow(-2px 2px 6px #bdb3b3);
 }
 #services-sec .slick-center .service-description.desc-right{
-    box-shadow: 2px 2px  8px 2px #bdb3b3;
+    filter: drop-shadow(2px 2px 6px #bdb3b3);
+    -webkit-filter: drop-shadow(2px 2px 6px #bdb3b3);
 }
 #services-sec .service-item{
     padding: 0 16px;
@@ -1056,7 +1053,7 @@ button:focus,input:focus,textarea:focus{
     position: absolute;
     top: 0;
     left: -10px;
-    width: 110%;
+    width: 115%;
     height: 100%;
     border: 1px solid #ffffff;
     transform: skew(-10deg, 0deg);

@@ -4,22 +4,12 @@ $(function () {
         $('html, body').animate({ scrollTop: 0 }, 1000);
     });
 
-    // bootstrap scroll spy
-
-    // $(function () {
-    //     var scrollSpy = new bootstrap.ScrollSpy(document.body, {
-    //         target: '#navbar',
-    //         offset: 75,
-    //     });
-    // });
-
     // scrollspy js
     scrollSpy('.navbar-nav', {
         sectionSelector: 'div',
         targetSelector: 'a',
-        offset: 78,
+        offset: 75,
     });
-
 
     //Scroll function for navbar and backToTop Btn
     $(function () {
@@ -69,11 +59,16 @@ $(function () {
             target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
             if (target.length) {
                 html_body.animate({
-                    scrollTop: target.offset().top - 78
+                    scrollTop: target.offset().top - 75
                 }, 2000);
                 return false;
             }
         }
+    });
+
+    // Closes responsive menu when a scroll link is clicked
+    $('.navbar a').on('click', function () {
+        $('.navbar-collapse').collapse('hide');
     });
 
     //portfolio lightbox
@@ -98,7 +93,7 @@ $(function () {
                 }
             },
             {
-                breakpoint: 768,
+                breakpoint: 992,
                 settings: {
                     slidesToShow: 3,
                 }
