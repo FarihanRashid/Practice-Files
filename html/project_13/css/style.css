@@ -17,13 +17,9 @@
     box-sizing: border-box;
     outline: none;
 }
-html {
-    scroll-behavior: smooth;
-    scroll-snap-type: y proximity;
-  }
+
 body{
     position: relative;
-    /* overflow-x: hidden; */
 }
 li,ol{
     list-style: none;

@@ -4,12 +4,11 @@ $(function () {
         $('html, body').animate({ scrollTop: 0 }, 1000);
     });
 
-    // scrollspy js
-    scrollSpy('.navbar-nav', {
-        sectionSelector: 'div',
-        targetSelector: 'a',
-        offset: 75,
-    });
+    // bootstrap scroll spy
+    var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+        target: '#navbar',
+        offset:76,
+      })
 
     //Scroll function for navbar and backToTop Btn
     $(function () {
@@ -48,7 +47,6 @@ $(function () {
         infinite: true,
         speed: 200,
         fade: true,
-        cssEase: 'linear'
     });
 
     // //animation scroll js
