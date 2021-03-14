@@ -4,12 +4,6 @@ $(function () {
         $('html, body').animate({ scrollTop: 0 }, 1000);
     });
 
-    // bootstrap scroll spy
-    var scrollSpy = new bootstrap.ScrollSpy(document.body, {
-        target: '#navbar',
-        offset:76,
-      })
-
     //Scroll function for navbar and backToTop Btn
     $(function () {
         var scrolling = $(this).scrollTop();
@@ -57,8 +51,8 @@ $(function () {
             target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
             if (target.length) {
                 html_body.animate({
-                    scrollTop: target.offset().top - 75
-                }, 2000);
+                    scrollTop: target.offset().top - 86
+                }, 2000, 'easeInOutExpo');
                 return false;
             }
         }
@@ -68,6 +62,13 @@ $(function () {
     $('.navbar a').on('click', function () {
         $('.navbar-collapse').collapse('hide');
     });
+
+
+    // bootstrap scroll spy
+    var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+        target: '#navbar',
+        offset: 86,
+    })
 
     //portfolio lightbox
     $('.venobox').venobox({

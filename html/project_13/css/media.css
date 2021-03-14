@@ -84,7 +84,7 @@
         margin-bottom: 20px;
     }
     #services-sec .service-img img{
-        width: 15%;
+        width: 20%;
     }
     #services-sec .service-item .row > *{
         flex-shrink: 1;
@@ -165,8 +165,8 @@
     }
     #market-place-sec .market-place-item::before{
         margin: 0 20px; 
-        left: -15px;
-        width: 100%;
+        left: -27px;
+        width: 105%;
     }
 
     #footer .footer-item{
@@ -399,8 +399,12 @@
         -ms-transform: rotate(356deg);
         -o-transform: rotate(356deg);
     }
+    #market-place-sec .market-place-item{
+        margin: 0 20px;
+    }
     #market-place-sec .market-place-item::before{
-        left: -12px;
+        left: -5px;
+        width: 110%;
     }
 
     #footer .footer-heading::after{
@@ -413,7 +417,7 @@
 }
 
 /*===================== Large Devices only =====================*/
-@media(min-width:992px) and (max-width:1999.98px){
+@media(min-width:992px) and (max-width:1199.98px){
     #navbar .nav-link{
         font-size: 15px;
         margin: 0 12px;
